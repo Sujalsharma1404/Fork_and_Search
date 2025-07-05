@@ -1,0 +1,15 @@
+.home-logo {
+  height: 60px;
+  object-fit: contain;
+}
+
+.header-home-nav .nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #212529;
+}
+
+.header-home-nav .nav-link:hover {
+  color: #ff5a5f;
+  text-decoration: none;
+}

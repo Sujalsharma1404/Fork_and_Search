@@ -1,8 +1,11 @@
+import Header from "./Components/Header";
+import HeaderHome from "./Components/HeaderHome";
 
 function App() {
   return (
      <div>
-      <h1>Fork and Search - React Version</h1>
+     <Header/>
+      <HeaderHome />
     </div>
   );
 }
