@@ -1,0 +1,15 @@
+.carousel-container {
+  /* max-height: 500px; /* Set the desired carousel height */
+  /* overflow: hidden; */ 
+}
+.carousel-container {
+  aspect-ratio: 16/9;
+}
+
+
+.carousel-image {
+  height: 100%;
+  width: 100%;
+object-fit: contain;
+background-color: #000;
+}
