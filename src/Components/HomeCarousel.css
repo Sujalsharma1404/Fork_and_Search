@@ -1,15 +1,22 @@
-.carousel-container {
-  /* max-height: 500px; /* Set the desired carousel height */
-  /* overflow: hidden; */ 
-}
-.carousel-container {
-  aspect-ratio: 16/9;
-}
-
-
-.carousel-image {
-  height: 100%;
+.carousel-wrapper {
   width: 100%;
-object-fit: contain;
-background-color: #000;
+  margin: 15px auto;           /* Center horizontally */
+  height: 550px;            /* Fixed height */
+  overflow: hidden;
+  border-radius: 16px;      /* Optional: for nice rounded corners */
+}
+
+/* Image fills the carousel box, even with different dimensions */
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    width: 95%;
+    height: 350px;
+  }
 }

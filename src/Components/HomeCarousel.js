@@ -2,27 +2,47 @@
 import React from "react";
 import { Carousel, Container } from "react-bootstrap";
 import "./HomeCarousel.css";
-import Slide1 from "../Assets/caraousel1.jpg";
-import Slide2 from "../Assets/caraousel2.jpg";
-import Slide3 from "../Assets/caraousel3.jpg";
+import Slide1 from "../Assets/videoo1.mp4";
+import Slide2 from "../Assets/videoo2.mp4";
+import Slide3 from "../Assets/videoo3.mp4";
 
 
 const HeroCarousel = () => {
-    return (
-        <Container fluid className="carousel-container px-0">
-            <Carousel fade controls indicators interval={3000}>
-                <Carousel.Item>
-  <img className="d-block w-100 carousel-image" src={Slide1} alt="Slide 1" />
-</Carousel.Item>
-<Carousel.Item>
-  <img className="d-block w-100 carousel-image" src={Slide2} alt="Slide 2" />
-</Carousel.Item>
-<Carousel.Item>
-  <img className="d-block w-100 carousel-image" src={Slide3} alt="Slide 3" />
-</Carousel.Item>
-            </Carousel>
-        </Container>
-    );
+  return (
+    <Container className="carousel-wrapper">
+      <Carousel fade controls indicators interval={8000}>
+        <Carousel.Item>
+          <video
+            className="d-block w-100 carousel-image"
+            src={Slide1}
+            autoPlay
+            loop
+            muted
+            playsInline
+            
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <video
+            className="d-block w-100 carousel-image"
+            src={Slide2}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />        </Carousel.Item>
+        <Carousel.Item>
+          <video
+            className="d-block w-100 carousel-image"
+            src={Slide3}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />        </Carousel.Item>
+      </Carousel>
+    </Container>
+  );
 };
 
 export default HeroCarousel;
