@@ -60,3 +60,19 @@
 .btn-close-search:hover {
   background-color: #f0f0f0;
 }
+ .header-logo {
+  height: 60px;
+}
+
+@media (max-width: 767px) {
+  .header-logo {
+    height: 40px;
+  }
+}
+
+.icon-action {
+  font-size: 22px;
+  color: #212529;
+  cursor: pointer;
+  padding: 4px 8px;
+}
