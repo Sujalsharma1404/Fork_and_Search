@@ -1,0 +1,1303 @@
+[
+    {
+        "category": "Indian",
+        "emoji": "🍛",
+        "color": "#FFD580",
+        "dishes": [
+            {
+                "id": 1,
+                "name": "Paneer Butter Masala",
+                "image": "https://source.unsplash.com/800x600/?paneer-butter-masala",
+                "time": "45 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 4",
+                "ingredients": [
+                    {
+                        "name": "Paneer",
+                        "quantity": "200g"
+                    },
+                    {
+                        "name": "Tomatoes",
+                        "quantity": "3 medium, pureed"
+                    },
+                    {
+                        "name": "Butter",
+                        "quantity": "2 tbsp"
+                    },
+                    {
+                        "name": "Cream",
+                        "quantity": "2 tbsp"
+                    },
+                    {
+                        "name": "Garam Masala",
+                        "quantity": "1 tsp"
+                    }
+                ],
+                "steps": [
+                    "Heat butter in a pan, sauté onions until translucent",
+                    "Add ginger-garlic paste; cook until raw smell disappears",
+                    "Add tomato puree and cook until oil separates",
+                    "Mix in spices, then add paneer cubes",
+                    "Simmer for 10 minutes, finish with cream"
+                ],
+                "tips": [
+                    "Soak paneer in warm water to keep it soft",
+                    "Use Kashmiri red chili for color without too much heat"
+                ],
+                "nutrition": {
+                    "calories": "420 kcal",
+                    "protein": "15g",
+                    "carbs": "20g",
+                    "fat": "30g"
+                }
+            },
+            {
+                "id": 2,
+                "name": "Chana Masala",
+                "image": "https://source.unsplash.com/800x600/?chana-masala",
+                "time": "40 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Chickpeas",
+                        "quantity": "2 cups cooked"
+                    },
+                    {
+                        "name": "Onion",
+                        "quantity": "1 large, chopped"
+                    },
+                    {
+                        "name": "Tomatoes",
+                        "quantity": "2 medium, chopped"
+                    },
+                    {
+                        "name": "Chana Masala Powder",
+                        "quantity": "2 tsp"
+                    }
+                ],
+                "steps": [
+                    "Heat oil, add cumin seeds and let them splutter",
+                    "Add onions and sauté until golden brown",
+                    "Add tomatoes and cook until soft",
+                    "Mix in spices and chickpeas with water",
+                    "Simmer for 15-20 minutes"
+                ],
+                "tips": [
+                    "Use canned chickpeas for quicker preparation",
+                    "Add amchur (dry mango powder) for tanginess"
+                ],
+                "nutrition": {
+                    "calories": "320 kcal",
+                    "protein": "12g",
+                    "carbs": "45g",
+                    "fat": "10g"
+                }
+            },
+            {
+                "id": 3,
+                "name": "Dal Tadka",
+                "image": "https://source.unsplash.com/800x600/?dal-tadka",
+                "time": "30 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 2",
+                "ingredients": [
+                    {
+                        "name": "Yellow Lentils",
+                        "quantity": "1 cup"
+                    },
+                    {
+                        "name": "Tomato",
+                        "quantity": "1 medium, chopped"
+                    },
+                    {
+                        "name": "Onion",
+                        "quantity": "1 small, chopped"
+                    },
+                    {
+                        "name": "Garlic",
+                        "quantity": "3 cloves, minced"
+                    }
+                ],
+                "steps": [
+                    "Pressure cook lentils with turmeric until soft",
+                    "Heat ghee, add cumin seeds, garlic, and onions",
+                    "Add tomatoes and cook until mushy",
+                    "Mix in cooked lentils and simmer",
+                    "Finish with a tempering of ghee with garlic"
+                ],
+                "tips": [
+                    "Use a mix of toor dal and moong dal",
+                    "Add kasuri methi for extra aroma"
+                ],
+                "nutrition": {
+                    "calories": "280 kcal",
+                    "protein": "14g",
+                    "carbs": "40g",
+                    "fat": "8g"
+                }
+            },
+            {
+                "id": 4,
+                "name": "Aloo Gobi",
+                "image": "https://source.unsplash.com/800x600/?aloo-gobi",
+                "time": "35 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Potatoes",
+                        "quantity": "2 medium, cubed"
+                    },
+                    {
+                        "name": "Cauliflower",
+                        "quantity": "1 small, florets"
+                    },
+                    {
+                        "name": "Onion",
+                        "quantity": "1 medium, chopped"
+                    },
+                    {
+                        "name": "Tomato",
+                        "quantity": "1 medium, chopped"
+                    }
+                ],
+                "steps": [
+                    "Heat oil, add cumin seeds and let them splutter",
+                    "Add onions and sauté until translucent",
+                    "Add ginger and tomatoes; cook until soft",
+                    "Mix in spices and vegetables",
+                    "Cover and cook on low heat until tender"
+                ],
+                "tips": [
+                    "Don't overcook the cauliflower",
+                    "Add peas for extra color and nutrition"
+                ],
+                "nutrition": {
+                    "calories": "250 kcal",
+                    "protein": "6g",
+                    "carbs": "45g",
+                    "fat": "7g"
+                }
+            },
+            {
+                "id": 5,
+                "name": "Palak Paneer",
+                "image": "https://source.unsplash.com/800x600/?palak-paneer",
+                "time": "40 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Paneer",
+                        "quantity": "200g, cubed"
+                    },
+                    {
+                        "name": "Spinach",
+                        "quantity": "3 cups, blanched"
+                    },
+                    {
+                        "name": "Onion",
+                        "quantity": "1 medium, chopped"
+                    },
+                    {
+                        "name": "Tomato",
+                        "quantity": "1 medium, chopped"
+                    }
+                ],
+                "steps": [
+                    "Blanch spinach and blend with ginger-garlic",
+                    "Heat oil, sauté onions until golden",
+                    "Add tomatoes and cook until soft",
+                    "Add spinach puree and simmer",
+                    "Add paneer cubes and cook for 5 minutes"
+                ],
+                "tips": [
+                    "Blanch spinach quickly to retain color",
+                    "Add a pinch of sugar to balance flavors"
+                ],
+                "nutrition": {
+                    "calories": "350 kcal",
+                    "protein": "18g",
+                    "carbs": "20g",
+                    "fat": "22g"
+                }
+            }
+        ]
+    },
+    {
+        "category": "Italian",
+        "emoji": "🍝",
+        "color": "#FFB7B2",
+        "dishes": [
+            {
+                "id": 6,
+                "name": "Margherita Pizza",
+                "image": "https://source.unsplash.com/800x600/?margherita-pizza",
+                "time": "30 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 2",
+                "ingredients": [
+                    {
+                        "name": "Pizza Dough",
+                        "quantity": "1 ball"
+                    },
+                    {
+                        "name": "Tomato Sauce",
+                        "quantity": "1/2 cup"
+                    },
+                    {
+                        "name": "Fresh Mozzarella",
+                        "quantity": "150g, sliced"
+                    }
+                ],
+                "steps": [
+                    "Preheat oven to 475°F (245°C)",
+                    "Roll out dough on floured surface",
+                    "Spread tomato sauce, leaving border",
+                    "Arrange mozzarella slices evenly",
+                    "Bake for 10-12 minutes until golden"
+                ],
+                "tips": [
+                    "Use pizza stone for crispier crust",
+                    "Let dough rest before shaping"
+                ],
+                "nutrition": {
+                    "calories": "380 kcal",
+                    "protein": "15g",
+                    "carbs": "50g",
+                    "fat": "14g"
+                }
+            },
+            {
+                "id": 7,
+                "name": "Pasta Primavera",
+                "image": "https://source.unsplash.com/800x600/?pasta-primavera",
+                "time": "25 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Penne Pasta",
+                        "quantity": "300g"
+                    },
+                    {
+                        "name": "Bell Peppers",
+                        "quantity": "1 cup, sliced"
+                    },
+                    {
+                        "name": "Zucchini",
+                        "quantity": "1 medium, sliced"
+                    }
+                ],
+                "steps": [
+                    "Cook pasta according to package",
+                    "Sauté garlic until fragrant",
+                    "Add vegetables and cook until crisp-tender",
+                    "Toss with cooked pasta",
+                    "Season with salt, pepper, and herbs"
+                ],
+                "tips": [
+                    "Reserve pasta water to adjust sauce",
+                    "Add red pepper flakes for kick"
+                ],
+                "nutrition": {
+                    "calories": "320 kcal",
+                    "protein": "12g",
+                    "carbs": "45g",
+                    "fat": "10g"
+                }
+            },
+            {
+                "id": 8,
+                "name": "Eggplant Parmesan",
+                "image": "https://source.unsplash.com/800x600/?eggplant-parmesan",
+                "time": "50 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 4",
+                "ingredients": [
+                    {
+                        "name": "Eggplant",
+                        "quantity": "2 medium, sliced"
+                    },
+                    {
+                        "name": "Marinara Sauce",
+                        "quantity": "2 cups"
+                    },
+                    {
+                        "name": "Mozzarella",
+                        "quantity": "200g, shredded"
+                    }
+                ],
+                "steps": [
+                    "Salt eggplant slices and let sit 30 minutes",
+                    "Dredge in flour, egg, then breadcrumbs",
+                    "Fry until golden on both sides",
+                    "Layer in baking dish with sauce and cheese",
+                    "Bake at 375°F (190°C) for 25 minutes"
+                ],
+                "tips": [
+                    "Use mandoline for even slices",
+                    "Bake instead of fry for lighter version"
+                ],
+                "nutrition": {
+                    "calories": "380 kcal",
+                    "protein": "18g",
+                    "carbs": "35g",
+                    "fat": "20g"
+                }
+            },
+            {
+                "id": 9,
+                "name": "Risotto ai Funghi",
+                "image": "https://source.unsplash.com/800x600/?mushroom-risotto",
+                "time": "40 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Arborio Rice",
+                        "quantity": "1 1/2 cups"
+                    },
+                    {
+                        "name": "Mushrooms",
+                        "quantity": "300g, sliced"
+                    },
+                    {
+                        "name": "Vegetable Stock",
+                        "quantity": "4 cups, hot"
+                    }
+                ],
+                "steps": [
+                    "Sauté onions and garlic in olive oil",
+                    "Add mushrooms and cook until soft",
+                    "Add rice and toast for 2 minutes",
+                    "Add stock one ladle at a time",
+                    "Stir constantly until rice is al dente"
+                ],
+                "tips": [
+                    "Keep stock at simmer for even cooking",
+                    "Use mix of wild mushrooms for flavor"
+                ],
+                "nutrition": {
+                    "calories": "420 kcal",
+                    "protein": "10g",
+                    "carbs": "65g",
+                    "fat": "12g"
+                }
+            },
+            {
+                "id": 10,
+                "name": "Caprese Salad",
+                "image": "https://source.unsplash.com/800x600/?caprese-salad",
+                "time": "15 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 2",
+                "ingredients": [
+                    {
+                        "name": "Fresh Mozzarella",
+                        "quantity": "200g, sliced"
+                    },
+                    {
+                        "name": "Tomatoes",
+                        "quantity": "2 large, sliced"
+                    },
+                    {
+                        "name": "Fresh Basil",
+                        "quantity": "1/2 cup leaves"
+                    }
+                ],
+                "steps": [
+                    "Arrange alternating slices of tomato and mozzarella",
+                    "Tuck basil leaves between slices",
+                    "Drizzle with olive oil and balsamic",
+                    "Season with salt and pepper"
+                ],
+                "tips": [
+                    "Use heirloom tomatoes for best flavor",
+                    "Make balsamic reduction for drizzle"
+                ],
+                "nutrition": {
+                    "calories": "280 kcal",
+                    "protein": "14g",
+                    "carbs": "8g",
+                    "fat": "22g"
+                }
+            }
+        ]
+    },
+    {
+        "category": "Chinese",
+        "emoji": "🥡",
+        "color": "#FF9AA2",
+        "dishes": [
+            {
+                "id": 11,
+                "name": "Vegetable Stir Fry",
+                "image": "https://source.unsplash.com/800x600/?vegetable-stir-fry",
+                "time": "20 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 2",
+                "ingredients": [
+                    {
+                        "name": "Broccoli",
+                        "quantity": "1 cup, florets"
+                    },
+                    {
+                        "name": "Bell Peppers",
+                        "quantity": "1, sliced"
+                    },
+                    {
+                        "name": "Carrots",
+                        "quantity": "1, julienned"
+                    }
+                ],
+                "steps": [
+                    "Heat oil in wok over high heat",
+                    "Add garlic and ginger; stir for 30 seconds",
+                    "Add vegetables starting with hardest ones first",
+                    "Stir fry for 4-5 minutes until crisp-tender",
+                    "Add sauce and toss to coat"
+                ],
+                "tips": [
+                    "Keep heat high and keep stirring",
+                    "Add cashews for extra crunch"
+                ],
+                "nutrition": {
+                    "calories": "180 kcal",
+                    "protein": "5g",
+                    "carbs": "20g",
+                    "fat": "10g"
+                }
+            },
+            {
+                "id": 12,
+                "name": "Vegetable Spring Rolls",
+                "image": "https://source.unsplash.com/800x600/?vegetable-spring-rolls",
+                "time": "35 minutes",
+                "difficulty": "Medium",
+                "quantity": "Makes 12 rolls",
+                "ingredients": [
+                    {
+                        "name": "Spring Roll Wrappers",
+                        "quantity": "12 sheets"
+                    },
+                    {
+                        "name": "Cabbage",
+                        "quantity": "1 cup, shredded"
+                    },
+                    {
+                        "name": "Carrots",
+                        "quantity": "1, julienned"
+                    }
+                ],
+                "steps": [
+                    "Sauté garlic and vegetables until softened",
+                    "Let filling cool before wrapping",
+                    "Place filling on wrapper, fold sides, roll tightly",
+                    "Fry in hot oil until golden brown",
+                    "Drain on paper towels"
+                ],
+                "tips": [
+                    "Keep wrappers covered with damp cloth",
+                    "Bake at 400°F (200°C) for healthier version"
+                ],
+                "nutrition": {
+                    "calories": "120 kcal per roll",
+                    "protein": "3g",
+                    "carbs": "20g",
+                    "fat": "4g"
+                }
+            },
+            {
+                "id": 13,
+                "name": "Mapo Tofu (Vegetarian)",
+                "image": "https://source.unsplash.com/800x600/?mapo-tofu",
+                "time": "30 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Firm Tofu",
+                        "quantity": "400g, cubed"
+                    },
+                    {
+                        "name": "Mushrooms",
+                        "quantity": "1 cup, chopped"
+                    },
+                    {
+                        "name": "Sichuan Peppercorns",
+                        "quantity": "1 tsp"
+                    }
+                ],
+                "steps": [
+                    "Toast Sichuan peppercorns and grind coarsely",
+                    "Sauté garlic, ginger, and doubanjiang",
+                    "Add mushrooms and cook until softened",
+                    "Add stock and bring to simmer",
+                    "Gently add tofu cubes and simmer"
+                ],
+                "tips": [
+                    "Use soft tofu for authentic texture",
+                    "Adjust spice level to preference"
+                ],
+                "nutrition": {
+                    "calories": "220 kcal",
+                    "protein": "15g",
+                    "carbs": "12g",
+                    "fat": "12g"
+                }
+            },
+            {
+                "id": 14,
+                "name": "Vegetable Fried Rice",
+                "image": "https://source.unsplash.com/800x600/?vegetable-fried-rice",
+                "time": "25 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Cooked Rice",
+                        "quantity": "3 cups, chilled"
+                    },
+                    {
+                        "name": "Mixed Vegetables",
+                        "quantity": "1 1/2 cups (peas, carrots, corn)"
+                    },
+                    {
+                        "name": "Eggs",
+                        "quantity": "2, beaten (optional)"
+                    }
+                ],
+                "steps": [
+                    "Heat oil, scramble eggs if using, then remove",
+                    "Sauté garlic until fragrant",
+                    "Add vegetables and stir fry for 2 minutes",
+                    "Add rice, breaking up any clumps",
+                    "Stir in soy sauce and white pepper"
+                ],
+                "tips": [
+                    "Use day-old rice for best texture",
+                    "High heat prevents mushiness"
+                ],
+                "nutrition": {
+                    "calories": "280 kcal",
+                    "protein": "8g",
+                    "carbs": "45g",
+                    "fat": "8g"
+                }
+            },
+            {
+                "id": 15,
+                "name": "Hot and Sour Soup",
+                "image": "https://source.unsplash.com/800x600/?hot-sour-soup",
+                "time": "30 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 4",
+                "ingredients": [
+                    {
+                        "name": "Vegetable Stock",
+                        "quantity": "4 cups"
+                    },
+                    {
+                        "name": "Tofu",
+                        "quantity": "150g, julienned"
+                    },
+                    {
+                        "name": "Mushrooms",
+                        "quantity": "1 cup, sliced"
+                    }
+                ],
+                "steps": [
+                    "Bring stock to boil, add mushrooms",
+                    "Add tofu, vinegar, soy sauce, and pepper",
+                    "Thicken with cornstarch slurry",
+                    "Slowly drizzle in beaten egg while stirring",
+                    "Finish with sesame oil"
+                ],
+                "tips": [
+                    "Adjust vinegar and pepper to taste",
+                    "Add wood ear mushrooms for texture"
+                ],
+                "nutrition": {
+                    "calories": "150 kcal",
+                    "protein": "8g",
+                    "carbs": "15g",
+                    "fat": "6g"
+                }
+            }
+        ]
+    },
+    {
+        "category": "Mexican",
+        "emoji": "🌮",
+        "color": "#FFFACD",
+        "dishes": [
+            {
+                "id": 16,
+                "name": "Vegetable Quesadillas",
+                "image": "https://source.unsplash.com/800x600/?vegetable-quesadilla",
+                "time": "25 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 2",
+                "ingredients": [
+                    {
+                        "name": "Flour Tortillas",
+                        "quantity": "4 medium"
+                    },
+                    {
+                        "name": "Bell Peppers",
+                        "quantity": "1, sliced"
+                    },
+                    {
+                        "name": "Onion",
+                        "quantity": "1/2, sliced"
+                    },
+                    {
+                        "name": "Cheese",
+                        "quantity": "1 1/2 cups shredded"
+                    }
+                ],
+                "steps": [
+                    "Sauté vegetables with spices until tender",
+                    "Place cheese and vegetables on half of each tortilla",
+                    "Fold over and cook in dry skillet",
+                    "Flip until golden on both sides",
+                    "Cut into wedges and serve"
+                ],
+                "tips": [
+                    "Use mix of cheeses for better flavor",
+                    "Press with spatula while cooking"
+                ],
+                "nutrition": {
+                    "calories": "380 kcal",
+                    "protein": "15g",
+                    "carbs": "35g",
+                    "fat": "20g"
+                }
+            },
+            {
+                "id": 17,
+                "name": "Vegetable Enchiladas",
+                "image": "https://source.unsplash.com/800x600/?vegetable-enchiladas",
+                "time": "45 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 4",
+                "ingredients": [
+                    {
+                        "name": "Corn Tortillas",
+                        "quantity": "8"
+                    },
+                    {
+                        "name": "Black Beans",
+                        "quantity": "1 cup, cooked"
+                    },
+                    {
+                        "name": "Corn",
+                        "quantity": "1 cup"
+                    },
+                    {
+                        "name": "Enchilada Sauce",
+                        "quantity": "2 cups"
+                    }
+                ],
+                "steps": [
+                    "Sauté onions, garlic, and vegetables",
+                    "Mix with beans and 1/2 cup enchilada sauce",
+                    "Dip tortillas in warm sauce to soften",
+                    "Fill with mixture, roll up, place in baking dish",
+                    "Top with remaining sauce and cheese",
+                    "Bake at 375°F (190°C) for 20 minutes"
+                ],
+                "tips": [
+                    "Warm tortillas slightly to prevent cracking",
+                    "Let sit 5 minutes after baking"
+                ],
+                "nutrition": {
+                    "calories": "320 kcal",
+                    "protein": "12g",
+                    "carbs": "45g",
+                    "fat": "10g"
+                }
+            },
+            {
+                "id": 18,
+                "name": "Vegetable Fajitas",
+                "image": "https://source.unsplash.com/800x600/?vegetable-fajitas",
+                "time": "30 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Bell Peppers",
+                        "quantity": "2, sliced"
+                    },
+                    {
+                        "name": "Onion",
+                        "quantity": "1 large, sliced"
+                    },
+                    {
+                        "name": "Zucchini",
+                        "quantity": "1, sliced"
+                    },
+                    {
+                        "name": "Fajita Seasoning",
+                        "quantity": "1 tbsp"
+                    }
+                ],
+                "steps": [
+                    "Toss vegetables with seasoning",
+                    "Heat oil in large skillet over high heat",
+                    "Add vegetables and cook until charred but crisp-tender",
+                    "Serve with warm tortillas"
+                ],
+                "tips": [
+                    "Don't overcrowd the pan",
+                    "Use cast iron skillet for best results"
+                ],
+                "nutrition": {
+                    "calories": "280 kcal",
+                    "protein": "6g",
+                    "carbs": "40g",
+                    "fat": "12g"
+                }
+            },
+            {
+                "id": 19,
+                "name": "Vegetable Tacos",
+                "image": "https://source.unsplash.com/800x600/?vegetable-tacos",
+                "time": "25 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 3",
+                "ingredients": [
+                    {
+                        "name": "Corn Tortillas",
+                        "quantity": "8"
+                    },
+                    {
+                        "name": "Sweet Potatoes",
+                        "quantity": "2 cups, cubed and roasted"
+                    },
+                    {
+                        "name": "Black Beans",
+                        "quantity": "1 cup, cooked"
+                    }
+                ],
+                "steps": [
+                    "Toss sweet potatoes with spices and roast at 400°F (200°C)",
+                    "Warm tortillas according to package",
+                    "Assemble tacos with sweet potatoes and beans",
+                    "Add toppings like avocado and salsa",
+                    "Serve with lime wedges"
+                ],
+                "tips": [
+                    "Double roast sweet potatoes for caramelization",
+                    "Char tortillas slightly for flavor"
+                ],
+                "nutrition": {
+                    "calories": "320 kcal",
+                    "protein": "8g",
+                    "carbs": "50g",
+                    "fat": "10g"
+                }
+            },
+            {
+                "id": 20,
+                "name": "Vegetable Tamales",
+                "image": "https://source.unsplash.com/800x600/?vegetable-tamales",
+                "time": "2 hours",
+                "difficulty": "Hard",
+                "quantity": "Makes 12 tamales",
+                "ingredients": [
+                    {
+                        "name": "Masa Harina",
+                        "quantity": "2 cups"
+                    },
+                    {
+                        "name": "Vegetable Broth",
+                        "quantity": "1 1/2 cups"
+                    },
+                    {
+                        "name": "Corn Husks",
+                        "quantity": "12, soaked"
+                    },
+                    {
+                        "name": "Filling: Zucchini, Corn, Cheese",
+                        "quantity": "2 cups"
+                    }
+                ],
+                "steps": [
+                    "Beat shortening until fluffy, mix in masa ingredients",
+                    "Spread masa on soaked corn husks",
+                    "Add vegetable filling in center",
+                    "Fold husks and tie ends",
+                    "Steam for 45-60 minutes"
+                ],
+                "tips": [
+                    "Soak corn husks in warm water for 30+ minutes",
+                    "Test masa by floating small piece in water"
+                ],
+                "nutrition": {
+                    "calories": "220 kcal per tamale",
+                    "protein": "4g",
+                    "carbs": "25g",
+                    "fat": "12g"
+                }
+            }
+        ]
+    },
+    {
+        "category": "Desserts",
+        "emoji": "🍰",
+        "color": "#C7CEEA",
+        "dishes": [
+            {
+                "id": 21,
+                "name": "Chocolate Lava Cake",
+                "image": "https://source.unsplash.com/800x600/?chocolate-lava-cake",
+                "time": "30 minutes",
+                "difficulty": "Medium",
+                "quantity": "Serves 2",
+                "ingredients": [
+                    {
+                        "name": "Dark Chocolate",
+                        "quantity": "100g"
+                    },
+                    {
+                        "name": "Butter",
+                        "quantity": "100g"
+                    },
+                    {
+                        "name": "Eggs",
+                        "quantity": "2"
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": "50g"
+                    }
+                ],
+                "steps": [
+                    "Melt chocolate and butter together",
+                    "Whisk eggs and sugar until pale",
+                    "Fold in chocolate mixture, then flour",
+                    "Pour into greased ramekins",
+                    "Bake at 375°F (190°C) for 10-12 minutes"
+                ],
+                "tips": [
+                    "Don't overbake - centers should be jiggly",
+                    "Can be prepared ahead and refrigerated"
+                ],
+                "nutrition": {
+                    "calories": "580 kcal",
+                    "protein": "8g",
+                    "carbs": "45g",
+                    "fat": "40g"
+                }
+            },
+            {
+                "id": 22,
+                "name": "Tiramisu",
+                "image": "https://source.unsplash.com/800x600/?tiramisu",
+                "time": "40 minutes + chilling",
+                "difficulty": "Medium",
+                "quantity": "Serves 6",
+                "ingredients": [
+                    {
+                        "name": "Ladyfingers",
+                        "quantity": "24"
+                    },
+                    {
+                        "name": "Mascarpone",
+                        "quantity": "500g"
+                    },
+                    {
+                        "name": "Eggs",
+                        "quantity": "3, separated"
+                    },
+                    {
+                        "name": "Strong Coffee",
+                        "quantity": "1 cup, cooled"
+                    }
+                ],
+                "steps": [
+                    "Beat egg yolks with sugar until pale",
+                    "Mix in mascarpone until smooth",
+                    "Whisk egg whites to stiff peaks",
+                    "Fold into mascarpone mixture",
+                    "Layer with coffee-dipped ladyfingers",
+                    "Chill for at least 4 hours"
+                ],
+                "tips": [
+                    "Use freshly brewed espresso",
+                    "Chill overnight for best texture"
+                ],
+                "nutrition": {
+                    "calories": "420 kcal",
+                    "protein": "10g",
+                    "carbs": "35g",
+                    "fat": "25g"
+                }
+            },
+            {
+                "id": 23,
+                "name": "Fruit Tart",
+                "image": "https://source.unsplash.com/800x600/?fruit-tart",
+                "time": "1 hour + chilling",
+                "difficulty": "Medium",
+                "quantity": "Serves 8",
+                "ingredients": [
+                    {
+                        "name": "Flour",
+                        "quantity": "1 1/2 cups"
+                    },
+                    {
+                        "name": "Butter",
+                        "quantity": "1/2 cup, cold"
+                    },
+                    {
+                        "name": "Egg Yolk",
+                        "quantity": "1"
+                    },
+                    {
+                        "name": "Pastry Cream",
+                        "quantity": "1 1/2 cups"
+                    },
+                    {
+                        "name": "Assorted Fruits",
+                        "quantity": "2 cups"
+                    }
+                ],
+                "steps": [
+                    "Make crust by pulsing dry ingredients with butter",
+                    "Press into tart pan and chill 30 minutes",
+                    "Bake at 375°F (190°C) for 15 minutes",
+                    "Cool completely, fill with pastry cream",
+                    "Arrange fruit decoratively on top",
+                    "Glaze with warmed apricot jam"
+                ],
+                "tips": [
+                    "Blind bake crust with weights",
+                    "Pat fruit dry before arranging"
+                ],
+                "nutrition": {
+                    "calories": "280 kcal",
+                    "protein": "4g",
+                    "carbs": "35g",
+                    "fat": "14g"
+                }
+            },
+            {
+                "id": 24,
+                "name": "Crème Brûlée",
+                "image": "https://source.unsplash.com/800x600/?creme-brulee",
+                "time": "1 hour + chilling",
+                "difficulty": "Medium",
+                "quantity": "Serves 4",
+                "ingredients": [
+                    {
+                        "name": "Heavy Cream",
+                        "quantity": "2 cups"
+                    },
+                    {
+                        "name": "Vanilla Bean",
+                        "quantity": "1 or 1 tsp extract"
+                    },
+                    {
+                        "name": "Egg Yolks",
+                        "quantity": "5"
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": "1/3 cup + extra for topping"
+                    }
+                ],
+                "steps": [
+                    "Heat cream with vanilla until simmering",
+                    "Whisk yolks with sugar and salt",
+                    "Temper yolks with hot cream, then strain",
+                    "Pour into ramekins and bake in water bath",
+                    "Chill for at least 4 hours",
+                    "Sprinkle with sugar and caramelize with torch"
+                ],
+                "tips": [
+                    "Strain mixture for silky texture",
+                    "Let custards cool in water bath"
+                ],
+                "nutrition": {
+                    "calories": "380 kcal",
+                    "protein": "5g",
+                    "carbs": "25g",
+                    "fat": "28g"
+                }
+            },
+            {
+                "id": 25,
+                "name": "Cheesecake",
+                "image": "https://source.unsplash.com/800x600/?cheesecake",
+                "time": "1 hour + chilling",
+                "difficulty": "Medium",
+                "quantity": "Serves 8",
+                "ingredients": [
+                    {
+                        "name": "Graham Cracker Crumbs",
+                        "quantity": "1 1/2 cups"
+                    },
+                    {
+                        "name": "Butter",
+                        "quantity": "1/3 cup, melted"
+                    },
+                    {
+                        "name": "Cream Cheese",
+                        "quantity": "900g, room temperature"
+                    },
+                    {
+                        "name": "Sour Cream",
+                        "quantity": "1 cup"
+                    },
+                    {
+                        "name": "Eggs",
+                        "quantity": "3"
+                    }
+                ],
+                "steps": [
+                    "Mix crumbs with melted butter, press into pan",
+                    "Bake at 325°F (160°C) for 10 minutes",
+                    "Beat cream cheese until smooth, add sugar",
+                    "Add eggs one at a time, then sour cream",
+                    "Pour over crust and bake for 50-60 minutes",
+                    "Cool in oven with door ajar, then chill overnight"
+                ],
+                "tips": [
+                    "Use room temperature ingredients",
+                    "Run knife around edge after baking"
+                ],
+                "nutrition": {
+                    "calories": "480 kcal",
+                    "protein": "8g",
+                    "carbs": "35g",
+                    "fat": "35g"
+                }
+            }
+        ]
+    },
+    {
+        "category": "Beverages",
+        "emoji": "🍹",
+        "color": "#B5EAD7",
+        "dishes": [
+            {
+                "id": 26,
+                "name": "Mango Lassi",
+                "image": "https://source.unsplash.com/800x600/?mango-lassi",
+                "time": "10 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 2",
+                "ingredients": [
+                    {
+                        "name": "Ripe Mango",
+                        "quantity": "1 cup, chopped"
+                    },
+                    {
+                        "name": "Yogurt",
+                        "quantity": "1 cup"
+                    },
+                    {
+                        "name": "Milk",
+                        "quantity": "1/2 cup"
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": "2 tbsp (or to taste)"
+                    }
+                ],
+                "steps": [
+                    "Blend all ingredients until smooth",
+                    "Adjust sweetness to taste",
+                    "Serve chilled, garnished with cardamom"
+                ],
+                "tips": [
+                    "Use frozen mango for thicker texture",
+                    "Add pinch of saffron for special occasions"
+                ],
+                "nutrition": {
+                    "calories": "220 kcal",
+                    "protein": "6g",
+                    "carbs": "40g",
+                    "fat": "4g"
+                }
+            },
+            {
+                "id": 27,
+                "name": "Mojito (Virgin)",
+                "image": "https://source.unsplash.com/800x600/?virgin-mojito",
+                "time": "10 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 1",
+                "ingredients": [
+                    {
+                        "name": "Lime",
+                        "quantity": "1, cut into wedges"
+                    },
+                    {
+                        "name": "Mint Leaves",
+                        "quantity": "10"
+                    },
+                    {
+                        "name": "Soda Water",
+                        "quantity": "1 cup"
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": "2 tsp"
+                    }
+                ],
+                "steps": [
+                    "Muddle lime wedges, mint, and sugar in glass",
+                    "Fill glass with ice",
+                    "Top with soda water and stir gently",
+                    "Garnish with extra mint and lime wedge"
+                ],
+                "tips": [
+                    "Slap mint leaves before adding to release oils",
+                    "Use brown sugar for deeper flavor"
+                ],
+                "nutrition": {
+                    "calories": "80 kcal",
+                    "protein": "0g",
+                    "carbs": "20g",
+                    "fat": "0g"
+                }
+            },
+            {
+                "id": 28,
+                "name": "Smoothie Bowl",
+                "image": "https://source.unsplash.com/800x600/?smoothie-bowl",
+                "time": "15 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 1",
+                "ingredients": [
+                    {
+                        "name": "Frozen Banana",
+                        "quantity": "1"
+                    },
+                    {
+                        "name": "Frozen Berries",
+                        "quantity": "1/2 cup"
+                    },
+                    {
+                        "name": "Yogurt",
+                        "quantity": "1/4 cup"
+                    },
+                    {
+                        "name": "Milk",
+                        "quantity": "1/4 cup"
+                    }
+                ],
+                "steps": [
+                    "Blend frozen fruits with yogurt and milk until thick",
+                    "Pour into bowl",
+                    "Arrange toppings artistically",
+                    "Serve immediately"
+                ],
+                "tips": [
+                    "Use frozen fruit for thicker consistency",
+                    "Add spinach or kale for hidden greens"
+                ],
+                "nutrition": {
+                    "calories": "300 kcal",
+                    "protein": "8g",
+                    "carbs": "55g",
+                    "fat": "6g"
+                }
+            },
+            {
+                "id": 29,
+                "name": "Iced Matcha Latte",
+                "image": "https://source.unsplash.com/800x600/?matcha-latte",
+                "time": "10 minutes",
+                "difficulty": "Easy",
+                "quantity": "Serves 1",
+                "ingredients": [
+                    {
+                        "name": "Matcha Powder",
+                        "quantity": "1 tsp"
+                    },
+                    {
+                        "name": "Hot Water",
+                        "quantity": "2 tbsp"
+                    },
+                    {
+                        "name": "Milk",
+                        "quantity": "1 cup (dairy or plant-based)"
+                    },
+                    {
+                        "name": "Honey",
+                        "quantity": "1 tsp (or to taste)"
+                    }
+                ],
+                "steps": [
+                    "Whisk matcha with hot water until frothy",
+                    "Add honey and stir to dissolve",
+                    "Fill glass with ice, add milk",
+                    "Pour matcha mixture over milk",
+                    "Stir gently before drinking"
+                ],
+                "tips": [
+                    "Sift matcha powder to prevent clumps.",
+                    "Use a bamboo whisk for authentic preparation."
+                ]
+            },
+            {
+                "id": 30,
+                "name": "Hot Chocolate",
+                "image": "https://source.unsplash.com/400x300/?hot-chocolate",
+                "time": "15 minutes",
+                "quantity": "Serves 2",
+                "difficulty": "Easy",
+                "ingredients": [
+                    {
+                        "name": "Milk",
+                        "quantity": "2 cups"
+                    },
+                    {
+                        "name": "Dark Chocolate",
+                        "quantity": "100g, chopped"
+                    },
+                    {
+                        "name": "Cocoa Powder",
+                        "quantity": "1 tbsp"
+                    },
+                    {
+                        "name": "Sugar",
+                        "quantity": "1 tbsp (optional)"
+                    },
+                    {
+                        "name": "Vanilla Extract",
+                        "quantity": "1/2 tsp"
+                    },
+                    {
+                        "name": "Whipped Cream",
+                        "quantity": "for topping"
+                    }
+                ],
+                "steps": [
+                    "Heat milk gently until steaming but not boiling.",
+                    "Whisk in chocolate until melted.",
+                    "Add cocoa powder and sugar if using.",
+                    "Stir in vanilla.",
+                    "Pour into mugs and top with whipped cream."
+                ],
+                "nutrition": {
+                    "calories": "320 kcal",
+                    "protein": "8g",
+                    "carbs": "30g",
+                    "fat": "18g"
+                },
+                "tips": [
+                    "Use high-quality chocolate for best flavor.",
+                    "Add a pinch of cinnamon or chili for variation."
+                ]
+            }
+        ]
+    }
+]
