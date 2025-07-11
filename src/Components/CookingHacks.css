@@ -1,0 +1,77 @@
+.cooking-hacks {
+  padding: 2rem;
+  background-color: #fffdf7;
+  text-align: center;
+}
+
+.cooking-hacks h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hacks-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Force 3 per row */
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .hacks-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .hacks-container {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+}
+
+.hack-card {
+  background: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.hack-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hack-header .emoji {
+  font-size: 1.5rem;
+}
+
+.hack-header h3 {
+  font-size: 1rem;
+  flex: 1;
+  margin: 0 0.5rem;
+  text-align: left;
+  color: #222;
+}
+
+.hack-header .toggle {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.hack-content {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #444;
+  text-align: left;
+}
