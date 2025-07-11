@@ -46,10 +46,14 @@ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .category-circle {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
   }
   .emoji {
     font-size: 1.5rem;
+    
+  }
+  .category-name{
+    font-size: 1rem;
   }
 }
