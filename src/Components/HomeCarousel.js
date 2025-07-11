@@ -5,6 +5,7 @@ import "./HomeCarousel.css";
 import Slide1 from "../Assets/videoo1.mp4";
 import Slide2 from "../Assets/videoo2.mp4";
 import Slide3 from "../Assets/videoo3.mp4";
+import Slide4 from "../Assets/videoo4.mp4"
 
 
 const HeroCarousel = () => {
@@ -19,7 +20,7 @@ const HeroCarousel = () => {
             loop
             muted
             playsInline
-            
+
           />
         </Carousel.Item>
         <Carousel.Item>
@@ -35,6 +36,15 @@ const HeroCarousel = () => {
           <video
             className="d-block w-100 carousel-image"
             src={Slide3}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />        </Carousel.Item>
+          <Carousel.Item>
+          <video
+            className="d-block w-100 carousel-image"
+            src={Slide4}
             autoPlay
             loop
             muted
