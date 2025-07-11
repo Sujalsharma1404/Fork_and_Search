@@ -1,10 +1,16 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import "../Components/Style/About.css";
+import Header from "../Components/Header";
 
 function About() {
   return (
+   <>
+   <div>
+           <Header />
+         </div>
     <div className="about-page">
+      
       {/* Hero Section */}
       <div className="about-hero text-center">
         <Container>
@@ -53,6 +59,7 @@ function About() {
         </Row>
       </Container>
     </div>
+    </>
   );
 }
 
