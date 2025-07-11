@@ -17,17 +17,14 @@ import Tabs from "react-bootstrap/Tabs";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HeaderHome.css";
 
-// Modals
 import LoginModal from "./Modals/LoginModal";
 import MobileSearchModal from "./Modals/MobileSearchModal";
 import { useNavigate } from "react-router-dom";
-
 
 function HeaderHome() {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showMenu, setShowMenu] = useState(false);
-
   const [showLogin, setShowLogin] = useState(false);
   const [showMobileSearch, setShowMobileSearch] = useState(false);
 
@@ -42,7 +39,8 @@ function HeaderHome() {
     console.log("Searching for:", searchQuery);
     closeSearch();
   };
-const navigate = useNavigate(); // React Router hook to navigate pages
+
+  const navigate = useNavigate(); // React Router hook to navigate pages
 
   return (
     <div className="topbar-wrapper">
@@ -63,7 +61,10 @@ const navigate = useNavigate(); // React Router hook to navigate pages
               md="auto"
               className="d-flex align-items-center justify-content-end gap-2"
             >
-              <Button className="btn btn-icon d-none d-md-inline" onClick={toggleSearch}>
+              <Button
+                className="btn btn-icon d-none d-md-inline"
+                onClick={toggleSearch}
+              >
                 <FaSearch className="icon" />
               </Button>
 
@@ -110,7 +111,10 @@ const navigate = useNavigate(); // React Router hook to navigate pages
           {/* Mobile: Search | Logo | Hamburger */}
           <Row className="align-items-center justify-content-between d-flex d-md-none">
             <Col xs="auto">
-              <FaSearch className="icon-action" onClick={() => setShowMobileSearch(true)} />
+              <FaSearch
+                className="icon-action"
+                onClick={() => setShowMobileSearch(true)}
+              />
             </Col>
             <Col className="text-center">
               <img src={logo} alt="Fork & Search" className="header-logo" />
@@ -132,17 +136,21 @@ const navigate = useNavigate(); // React Router hook to navigate pages
       </div>
 
       {/* === Offcanvas Hamburger Menu === */}
-      <Offcanvas show={showMenu} onHide={() => setShowMenu(false)} placement="end">
+      <Offcanvas
+        show={showMenu}
+        onHide={() => setShowMenu(false)}
+        placement="end"
+      >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Recipes</Nav.Link>
-            <Nav.Link href="#">Categories</Nav.Link>
-            {/* <Nav.Link onClick={() => setShowContact(true)}>Contact</Nav.Link> */}
-            {/* <Nav.Link onClick={() => setShowAbout(true)}>About</Nav.Link>  */}
+            <Nav.Link onClick={() => { setShowMenu(false); navigate("/"); }}>Home</Nav.Link>
+            <Nav.Link onClick={() => { setShowMenu(false); navigate("/recipes"); }}>Recipes</Nav.Link>
+            <Nav.Link onClick={() => { setShowMenu(false); navigate("/categories"); }}>Categories</Nav.Link>
+            <Nav.Link onClick={() => { setShowMenu(false); navigate("/contact"); }}>Contact</Nav.Link>
+            <Nav.Link onClick={() => { setShowMenu(false); navigate("/about"); }}>About</Nav.Link>
             <Nav.Link onClick={() => setShowLogin(true)}>Login</Nav.Link>
           </Nav>
         </Offcanvas.Body>
@@ -172,7 +180,6 @@ const navigate = useNavigate(); // React Router hook to navigate pages
                 <Tab eventKey="contact" title="Contact" />
                 <Tab eventKey="about" title="About Us" />
               </Tabs>
-
             </Col>
           </Row>
         </Container>
