@@ -1,69 +1,52 @@
-/*  login modal */
+/* === Modal.css === */
 
-.login-modal .modal-content {
+.custom-modal .modal-content {
   border-radius: 12px;
-  padding: 20px;
+  padding: 1rem 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.login-modal .modal-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  width: 100%;
+.custom-modal .modal-header {
+  border-bottom: none;
 }
 
-.login-modal .form-control {
-  border-radius: 6px;
-}
-
-.login-modal .btn {
-  border-radius: 6px;
-}
-
-
-/* About us Modal */
-.about-modal .modal-content {
-  border-radius: 12px;
-  padding: 20px;
-  background-color: #fefefe;
-}
-
-.about-modal .modal-title {
-  font-size: 1.5rem;
+.custom-modal .modal-title {
   font-weight: 600;
 }
 
-.about-modal p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
+.custom-modal .modal-body {
+  padding-top: 0;
 }
 
-
-/* Contact us Modal */
-.contact-modal .modal-content {
-  border-radius: 12px;
-  padding: 20px;
-  background-color: #ffffff;
-}
-
-.contact-modal .modal-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.contact-modal .form-label {
+.custom-modal .form-label {
   font-weight: 500;
-  font-size: 0.95rem;
 }
 
-.contact-modal .form-control {
-  border-radius: 6px;
-  font-size: 0.95rem;
+.custom-modal .form-control {
+  border-radius: 8px;
 }
 
-.contact-modal .btn {
-  font-weight: 500;
+.custom-modal .btn-primary {
+  background: #ff7f50;
+  border: none;
+}
+
+.custom-modal .btn-primary:hover {
+  background: #ff6240;
+}
+
+.custom-modal .link-button {
+  background: none;
+  border: none;
+  color: #ff7f50;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.custom-modal .link-button:hover {
+  color: #ff6240;
 }
 
 
