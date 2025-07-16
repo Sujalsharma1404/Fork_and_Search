@@ -148,7 +148,6 @@ function HeaderHome() {
           <Nav className="flex-column">
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/"); }}>Home</Nav.Link>
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/recipes"); }}>Recipes</Nav.Link>
-            <Nav.Link onClick={() => { setShowMenu(false); navigate("/categories"); }}>Categories</Nav.Link>
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/contact"); }}>Contact</Nav.Link>
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/about"); }}>About</Nav.Link>
             <Nav.Link onClick={() => setShowLogin(true)}>Login</Nav.Link>
@@ -169,17 +168,16 @@ function HeaderHome() {
                 onSelect={(key) => {
                   if (key === "home") navigate("/");
                   if (key === "recipes") navigate("/recipes");
-                  if (key === "categories") navigate("/categories");
                   if (key === "contact") navigate("/contact");
                   if (key === "about") navigate("/about");
                 }}
               >
                 <Tab eventKey="home" title="Home" />
                 <Tab eventKey="recipes" title="Recipes" />
-                <Tab eventKey="categories" title="Categories" />
                 <Tab eventKey="contact" title="Contact" />
                 <Tab eventKey="about" title="About Us" />
               </Tabs>
+
             </Col>
           </Row>
         </Container>
