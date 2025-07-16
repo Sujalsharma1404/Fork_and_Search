@@ -1,9 +1,13 @@
 .carousel-wrapper {
   width: 100%;
-  margin: 15px auto;           /* Center horizontally */
-  height: 550px;            /* Fixed height */
+  margin: 15px auto;
+  /* Center horizontally */
+  height: 550px;
+  /* Fixed height */
   overflow: hidden;
-  border-radius: 16px;      /* Optional: for nice rounded corners */
+  border-radius: 16px;
+  /* Optional: for nice rounded corners */
+
 }
 
 /* Image fills the carousel box, even with different dimensions */
@@ -12,11 +16,15 @@
   height: 100%;
   object-fit: contain;
   object-position: center;
+  border-radius: 16px;
+  /* Optional: for nice rounded corners */
+
   display: block;
 }
+
 @media (max-width: 768px) {
   .carousel-wrapper {
     width: 95%;
-    height: 350px;
+    height: 170px;
   }
 }

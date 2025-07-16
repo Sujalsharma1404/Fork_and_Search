@@ -10,7 +10,7 @@ import Slide4 from "../Assets/videoo4.mp4"
 
 const HeroCarousel = () => {
   return (
-    <Container className="carousel-wrapper">
+    <Container className="carousel-wrapper ">
       <Carousel fade controls indicators interval={8000}>
         <Carousel.Item>
           <video
