@@ -1,20 +1,21 @@
 import React from "react";
 import HeaderHome from "../Components/HeaderHome";
 import HomeCarousel from "../Components/HomeCarousel";
-import CategorySection from "../Components/CategorySection";
+import PopularCategories from "../Components/CategorySection";
 import NewsletterSignup from "../Components/NewsletterSignup";
 import CookingHacks from "../Components/CookingHacks";
-import LatestRecipes from "../Components/LatestRecipes"
+import LatestRecipes from "../Components/LatestRecipes";
+import CategoryData from '../Components/Data/CategoryData.json';
+
 function Home() {
   return (
     <>
       <HeaderHome />
-      {/* Later: HeroSection, FeaturedRecipes, etc. */}
-      <HomeCarousel/>
-      <CategorySection/>
-      <LatestRecipes />
+      <HomeCarousel />
+      <PopularCategories categories={CategoryData} />
+      <LatestRecipes />
       <CookingHacks />
-      <NewsletterSignup />
+      <NewsletterSignup />
     </>
   );
 }
