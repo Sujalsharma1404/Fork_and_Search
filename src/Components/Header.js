@@ -6,14 +6,14 @@ import logo from "../Assets/logo1.png";
 import "./Header.css";
 import { IoClose } from "react-icons/io5";
 
-// ✅ Import LoginModal — update path if needed
+// ✅ Import LoginModal — path may vary
 import LoginModal from "../Components/Modals/LoginModal";
 
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [showLogin, setShowLogin] = useState(false); // ✅ added
+  const [showLogin, setShowLogin] = useState(false);
 
   const toggleSearch = () => setShowSearch(!showSearch);
   const closeSearch = () => {
@@ -31,29 +31,27 @@ function Header() {
     <header className="common-header">
       <Container>
         <div className="header-content">
-          {/* Logo */}
+          {/* === Logo === */}
           <div className="logo-container">
             <Link to="/">
               <img src={logo} alt="Fork & Search" className="header-logo" />
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* === Desktop Nav === */}
           <nav className="main-nav">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/recipes" className="nav-link">Recipes</Link>
-            <Link to="/about" className="nav-link">About us</Link>
+            <Link to="/about" className="nav-link">About Us</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
           </nav>
 
-          {/* CTA Button */}
+          {/* === Actions === */}
           <div className="header-actions">
-            {/* Search Toggle */}
             <button className="search-btn" onClick={toggleSearch}>
               <FaSearch size={18} />
             </button>
 
-            {/* Conditionally render input (desktop only) */}
             {showSearch && (
               <div className="search-wrapper">
                 <input
@@ -70,7 +68,6 @@ function Header() {
               </div>
             )}
 
-            {/* ✅ Login Button — opens LoginModal */}
             <Button
               variant="primary"
               className="login-btn"
@@ -80,7 +77,7 @@ function Header() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* === Mobile Toggle === */}
           <button
             className="menu-toggle"
             onClick={() => setShowMobileMenu(true)}
@@ -90,7 +87,7 @@ function Header() {
         </div>
       </Container>
 
-      {/* Mobile Menu */}
+      {/* === Mobile Menu === */}
       {showMobileMenu && (
         <div className="mobile-menu-overlay">
           <div className="mobile-menu">
@@ -105,7 +102,7 @@ function Header() {
             <nav className="mobile-nav">
               <Link to="/" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>Home</Link>
               <Link to="/recipes" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>Recipes</Link>
-              <Link to="/about" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>About us</Link>
+              <Link to="/about" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>About Us</Link>
               <Link to="/contact" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>Contact</Link>
               <Link className="mobile-nav-link" onClick={toggleSearch}>
                 <FaSearch size={18} /> Search
@@ -127,10 +124,8 @@ function Header() {
                 </div>
               )}
 
-              {/* ✅ Mobile Login Button — also opens LoginModal */}
               <Button
-                
-                className="btn btn-outline-dark btn-header d-none d-md-inline"
+                className="btn btn-outline-dark btn-header"
                 onClick={() => {
                   setShowLogin(true);
                   setShowMobileMenu(false);
@@ -143,7 +138,7 @@ function Header() {
         </div>
       )}
 
-      {/* ✅ Login Modal */}
+      {/* === Login Modal === */}
       <LoginModal show={showLogin} handleClose={() => setShowLogin(false)} />
     </header>
   );
