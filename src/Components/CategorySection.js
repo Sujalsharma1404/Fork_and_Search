@@ -1,29 +1,27 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./CategorySection.css";
 
-const categories = [
-  { name: "Indian", emoji: "🍝", color: "#FF9AA2" },
-  { name: "Italian", emoji: "🍕", color: "#FFB7B2" },
-  { name: "Beverages", emoji: "🌱", color: "#B5EAD7" },
-  { name: "Desserts", emoji: "🍰", color: "#C7CEEA" },
-  { name: "Snacks", emoji: "🥤", color: "#E2F0CB" }
-];
-
-function PopularCategories() {
+function PopularCategories({ categories }) {
   return (
     <Container className="popular-categories">
-      <h2 className="section-title">Popular Categories</h2>
+      <h1 className="section-title">Popular Categories</h1>
       <Row className="justify-content-center">
-        {categories.map((category, index) => (
-          <Col xs={4} sm={3} md={2} key={index} className="mb-4">
-            <div 
-              className="category-circle"
-              style={{ backgroundColor: category.color }}
+        {categories.map((category) => (
+          <Col xs={4} sm={3} md={2} key={category.category} className="mb-4">
+            <Link
+              to={`/category/${category.category.toLowerCase()}`}
+              className="category-link"
             >
-              <span className="emoji">{category.emoji}</span>
-              <p className="category-name">{category.name}</p>
-            </div>
+              <div
+                className="category-circle"
+                style={{ backgroundColor: category.color }}
+              >
+                <span className="emoji">{category.emoji}</span>
+                <p className="category-name">{category.category}</p>
+              </div>
+            </Link>
           </Col>
         ))}
       </Row>
