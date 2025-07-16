@@ -1,38 +1,51 @@
+/* === Footer.css === */
+
 .site-footer {
-  background-color: #f8f9fa;
-  color: #333;
-  font-size: 14px;
+  background: #fafafa;
+  padding: 3rem 0 1rem;
+  font-size: 0.95rem;
+  color: #444;
 }
 
 .footer-logo {
-  height: 50px;
+  width: 140px;
 }
 
-.footer-links {
-  list-style: none;
-  padding-left: 0;
+.footer-heading {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .footer-links li {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .footer-links a {
-  color: #333;
+  color: #555;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  color: #ff7f50;
+}
+
+.footer-description {
+  max-width: 300px;
 }
 
 .social-icons a {
-  margin-right: 15px;
-  font-size: 18px;
-  color: #333;
-  transition: color 0.3s ease;
+  color: #444;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #007bff;
+  color: #ff7f50;
+}
+
+.border-top {
+  border-top: 1px solid #ddd !important;
 }
