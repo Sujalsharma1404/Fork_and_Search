@@ -1,0 +1,79 @@
+/* src/Pages/DishDetail.css */
+.dish-detail {
+  padding: 2rem 0;
+  max-width: 1200px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #6c757d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: #0d6efd;
+}
+
+.dish-image-card {
+  border: none;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dish-image-card img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.dish-info-card {
+  border: none;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  height: 100%;
+}
+
+.dish-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.dish-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #495057;
+  margin-top: 1.5rem;
+}
+
+.steps-list, .tips-list {
+  padding-left: 1.5rem;
+}
+
+.steps-list li,
+.tips-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.not-found {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.not-found h2 {
+  margin-bottom: 1.5rem;
+  color: #dc3545;
+}
