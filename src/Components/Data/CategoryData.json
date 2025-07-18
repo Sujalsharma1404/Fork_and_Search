@@ -2,7 +2,7 @@
   {
     "category": "Indian",
     "emoji": "🍛",
-    "color": "#FD580",
+    "color": "#FD5800",
     "dishes": [
       {
         "id": 1,
@@ -13,26 +13,11 @@
         "difficulty": "Medium",
         "quantity": "Serves 4",
         "ingredients": [
-          {
-            "name": "Paneer",
-            "quantity": "200g"
-          },
-          {
-            "name": "Tomatoes",
-            "quantity": "3 medium, pureed"
-          },
-          {
-            "name": "Butter",
-            "quantity": "2 tbsp"
-          },
-          {
-            "name": "Cream",
-            "quantity": "2 tbsp"
-          },
-          {
-            "name": "Garam Masala",
-            "quantity": "1 tsp"
-          }
+          {"name": "Paneer", "quantity": "200g"},
+          {"name": "Tomatoes", "quantity": "3 medium, pureed"},
+          {"name": "Butter", "quantity": "2 tbsp"},
+          {"name": "Cream", "quantity": "2 tbsp"},
+          {"name": "Garam Masala", "quantity": "1 tsp"}
         ],
         "steps": [
           "Heat butter in a pan, sauté onions until translucent",
@@ -61,22 +46,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Chickpeas",
-            "quantity": "2 cups cooked"
-          },
-          {
-            "name": "Onion",
-            "quantity": "1 large, chopped"
-          },
-          {
-            "name": "Tomatoes",
-            "quantity": "2 medium, chopped"
-          },
-          {
-            "name": "Chana Masala Powder",
-            "quantity": "2 tsp"
-          }
+          {"name": "Chickpeas", "quantity": "2 cups cooked"},
+          {"name": "Onion", "quantity": "1 large, chopped"},
+          {"name": "Tomatoes", "quantity": "2 medium, chopped"},
+          {"name": "Chana Masala Powder", "quantity": "2 tsp"}
         ],
         "steps": [
           "Heat oil, add cumin seeds and let them splutter",
@@ -105,22 +78,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 2",
         "ingredients": [
-          {
-            "name": "Yellow Lentils",
-            "quantity": "1 cup"
-          },
-          {
-            "name": "Tomato",
-            "quantity": "1 medium, chopped"
-          },
-          {
-            "name": "Onion",
-            "quantity": "1 small, chopped"
-          },
-          {
-            "name": "Garlic",
-            "quantity": "3 cloves, minced"
-          }
+          {"name": "Yellow Lentils", "quantity": "1 cup"},
+          {"name": "Tomato", "quantity": "1 medium, chopped"},
+          {"name": "Onion", "quantity": "1 small, chopped"},
+          {"name": "Garlic", "quantity": "3 cloves, minced"}
         ],
         "steps": [
           "Pressure cook lentils with turmeric until soft",
@@ -149,22 +110,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Potatoes",
-            "quantity": "2 medium, cubed"
-          },
-          {
-            "name": "Cauliflower",
-            "quantity": "1 small, florets"
-          },
-          {
-            "name": "Onion",
-            "quantity": "1 medium, chopped"
-          },
-          {
-            "name": "Tomato",
-            "quantity": "1 medium, chopped"
-          }
+          {"name": "Potatoes", "quantity": "2 medium, cubed"},
+          {"name": "Cauliflower", "quantity": "1 small, florets"},
+          {"name": "Onion", "quantity": "1 medium, chopped"},
+          {"name": "Tomato", "quantity": "1 medium, chopped"}
         ],
         "steps": [
           "Heat oil, add cumin seeds and let them splutter",
@@ -193,22 +142,10 @@
         "difficulty": "Medium",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Paneer",
-            "quantity": "200g, cubed"
-          },
-          {
-            "name": "Spinach",
-            "quantity": "3 cups, blanched"
-          },
-          {
-            "name": "Onion",
-            "quantity": "1 medium, chopped"
-          },
-          {
-            "name": "Tomato",
-            "quantity": "1 medium, chopped"
-          }
+          {"name": "Paneer", "quantity": "200g, cubed"},
+          {"name": "Spinach", "quantity": "3 cups, blanched"},
+          {"name": "Onion", "quantity": "1 medium, chopped"},
+          {"name": "Tomato", "quantity": "1 medium, chopped"}
         ],
         "steps": [
           "Blanch spinach and blend with ginger-garlic",
@@ -227,6 +164,171 @@
           "carbs": "20g",
           "fat": "22g"
         }
+      },
+      {
+        "id": 6,
+        "name": "Malai Kofta",
+        "description": "Delicious fried paneer and potato balls in a rich, creamy gravy, a luxurious vegetarian dish.",
+        "image": "/Images/malaikofta.jpg",
+        "time": "1 hour",
+        "difficulty": "Hard",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Paneer", "quantity": "200g, grated"},
+          {"name": "Potatoes", "quantity": "2, boiled and mashed"},
+          {"name": "Cashews", "quantity": "10-12"},
+          {"name": "Tomato", "quantity": "3, pureed"},
+          {"name": "Fresh Cream", "quantity": "1/2 cup"}
+        ],
+        "steps": [
+          "Mix paneer, potatoes, and spices to form kofta balls",
+          "Deep fry until golden brown and set aside",
+          "Prepare gravy by sautéing onions, tomatoes, and cashew paste",
+          "Add spices and simmer until oil separates",
+          "Add cream and gently place koftas in gravy"
+        ],
+        "tips": [
+          "Keep kofta mixture chilled before frying",
+          "Add a pinch of sugar to balance acidity"
+        ],
+        "nutrition": {
+          "calories": "450 kcal",
+          "protein": "15g",
+          "carbs": "30g",
+          "fat": "30g"
+        }
+      },
+      {
+        "id": 7,
+        "name": "Vegetable Biryani",
+        "description": "Fragrant basmati rice cooked with mixed vegetables and aromatic spices in the dum style.",
+        "image": "/Images/vegbiryani.jpg",
+        "time": "1 hour",
+        "difficulty": "Medium",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Basmati Rice", "quantity": "2 cups"},
+          {"name": "Mixed Vegetables", "quantity": "2 cups (carrots, beans, cauliflower)"},
+          {"name": "Yogurt", "quantity": "1/2 cup"},
+          {"name": "Biryani Masala", "quantity": "2 tbsp"},
+          {"name": "Saffron", "quantity": "1 pinch"}
+        ],
+        "steps": [
+          "Soak rice for 30 minutes",
+          "Marinate vegetables in yogurt and spices",
+          "Parboil rice until 70% cooked",
+          "Layer rice and vegetables in heavy-bottomed pot",
+          "Seal with dough and cook on low heat for 20 minutes"
+        ],
+        "tips": [
+          "Use aged basmati rice for best results",
+          "Add fried onions between layers for flavor"
+        ],
+        "nutrition": {
+          "calories": "380 kcal",
+          "protein": "8g",
+          "carbs": "65g",
+          "fat": "10g"
+        }
+      },
+      {
+        "id": 8,
+        "name": "Rajma Chawal",
+        "description": "Classic Punjabi red kidney beans curry served with steamed rice, a comfort food favorite.",
+        "image": "/Images/rajma.jpg",
+        "time": "1 hour 15 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Red Kidney Beans", "quantity": "1 cup, soaked overnight"},
+          {"name": "Onion", "quantity": "2, finely chopped"},
+          {"name": "Tomatoes", "quantity": "3, pureed"},
+          {"name": "Ginger-Garlic Paste", "quantity": "1 tbsp"},
+          {"name": "Cumin Powder", "quantity": "1 tsp"}
+        ],
+        "steps": [
+          "Pressure cook soaked beans until tender",
+          "Sauté onions until golden brown",
+          "Add ginger-garlic paste and tomatoes",
+          "Cook until oil separates, then add spices",
+          "Add cooked beans and simmer for 15 minutes"
+        ],
+        "tips": [
+          "Soak beans for at least 8 hours",
+          "Mash some beans to thicken the gravy"
+        ],
+        "nutrition": {
+          "calories": "320 kcal",
+          "protein": "15g",
+          "carbs": "50g",
+          "fat": "8g"
+        }
+      },
+      {
+        "id": 9,
+        "name": "Dahi Bhalla",
+        "description": "Soft lentil dumplings soaked in creamy yogurt and topped with sweet and spicy chutneys.",
+        "image": "/Images/dahibhalla.jpg",
+        "time": "1 hour (plus soaking)",
+        "difficulty": "Medium",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Urad Dal", "quantity": "1 cup, soaked"},
+          {"name": "Yogurt", "quantity": "2 cups, whisked"},
+          {"name": "Tamarind Chutney", "quantity": "1/4 cup"},
+          {"name": "Roasted Cumin Powder", "quantity": "1 tsp"},
+          {"name": "Chaat Masala", "quantity": "1 tsp"}
+        ],
+        "steps": [
+          "Grind soaked dal to fluffy batter",
+          "Fry spoonfuls to make vadas",
+          "Soak in water, then squeeze out excess",
+          "Arrange in serving dish, top with yogurt",
+          "Drizzle chutneys and sprinkle spices"
+        ],
+        "tips": [
+          "Soak vadas in warm water for soft texture",
+          "Chill before serving for best taste"
+        ],
+        "nutrition": {
+          "calories": "280 kcal",
+          "protein": "10g",
+          "carbs": "35g",
+          "fat": "10g"
+        }
+      },
+      {
+        "id": 10,
+        "name": "Pav Bhaji",
+        "description": "Mumbai street food specialty - spicy mashed vegetable curry served with buttered bread rolls.",
+        "image": "/Images/pavbhaji.jpg",
+        "time": "45 minutes",
+        "difficulty": "Medium",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Mixed Vegetables", "quantity": "4 cups (potatoes, cauliflower, peas)"},
+          {"name": "Butter", "quantity": "3 tbsp"},
+          {"name": "Pav Bhaji Masala", "quantity": "2 tbsp"},
+          {"name": "Tomatoes", "quantity": "3, finely chopped"},
+          {"name": "Pav (bread rolls)", "quantity": "8"}
+        ],
+        "steps": [
+          "Pressure cook vegetables until very soft",
+          "Mash thoroughly with potato masher",
+          "Sauté onions, tomatoes, and spices",
+          "Add mashed vegetables and simmer",
+          "Serve hot with butter-toasted pav"
+        ],
+        "tips": [
+          "Use extra butter for authentic taste",
+          "Garnish with chopped onions and lemon"
+        ],
+        "nutrition": {
+          "calories": "350 kcal",
+          "protein": "8g",
+          "carbs": "45g",
+          "fat": "15g"
+        }
       }
     ]
   },
@@ -236,7 +338,7 @@
     "color": "#FFB7B2",
     "dishes": [
       {
-        "id": 6,
+        "id": 11,
         "name": "Margherita Pizza",
         "description": "The classic Neapolitan pizza featuring simple, fresh ingredients: tomato sauce, mozzarella, and basil.",
         "image": "/Images/pizza1.jpg",
@@ -244,18 +346,9 @@
         "difficulty": "Medium",
         "quantity": "Serves 2",
         "ingredients": [
-          {
-            "name": "Pizza Dough",
-            "quantity": "1 ball"
-          },
-          {
-            "name": "Tomato Sauce",
-            "quantity": "1/2 cup"
-          },
-          {
-            "name": "Fresh Mozzarella",
-            "quantity": "150g, sliced"
-          }
+          {"name": "Pizza Dough", "quantity": "1 ball"},
+          {"name": "Tomato Sauce", "quantity": "1/2 cup"},
+          {"name": "Fresh Mozzarella", "quantity": "150g, sliced"}
         ],
         "steps": [
           "Preheat oven to 475°F (245°C)",
@@ -276,7 +369,7 @@
         }
       },
       {
-        "id": 7,
+        "id": 12,
         "name": "Pasta Primavera",
         "description": "A colorful pasta dish loaded with fresh spring vegetables in a light sauce, perfect for warm weather.",
         "image": "/Images/pastaprmivera.jpg",
@@ -284,18 +377,9 @@
         "difficulty": "Easy",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Penne Pasta",
-            "quantity": "300g"
-          },
-          {
-            "name": "Bell Peppers",
-            "quantity": "1 cup, sliced"
-          },
-          {
-            "name": "Zucchini",
-            "quantity": "1 medium, sliced"
-          }
+          {"name": "Penne Pasta", "quantity": "300g"},
+          {"name": "Bell Peppers", "quantity": "1 cup, sliced"},
+          {"name": "Zucchini", "quantity": "1 medium, sliced"}
         ],
         "steps": [
           "Cook pasta according to package",
@@ -316,7 +400,7 @@
         }
       },
       {
-        "id": 8,
+        "id": 13,
         "name": "Eggplant Parmesan",
         "description": "Layers of breaded eggplant slices baked with marinara sauce and melted cheese, a vegetarian Italian classic.",
         "image": "/Images/eggplantparm.jpg",
@@ -324,18 +408,9 @@
         "difficulty": "Medium",
         "quantity": "Serves 4",
         "ingredients": [
-          {
-            "name": "Eggplant",
-            "quantity": "2 medium, sliced"
-          },
-          {
-            "name": "Marinara Sauce",
-            "quantity": "2 cups"
-          },
-          {
-            "name": "Mozzarella",
-            "quantity": "200g, shredded"
-          }
+          {"name": "Eggplant", "quantity": "2 medium, sliced"},
+          {"name": "Marinara Sauce", "quantity": "2 cups"},
+          {"name": "Mozzarella", "quantity": "200g, shredded"}
         ],
         "steps": [
           "Salt eggplant slices and let sit 30 minutes",
@@ -356,7 +431,7 @@
         }
       },
       {
-        "id": 9,
+        "id": 14,
         "name": "Risotto ai Funghi",
         "description": "Creamy Italian rice dish cooked with mushrooms and finished with Parmesan cheese, requiring constant stirring.",
         "image": "/Images/rissotto ai funghi.jpg",
@@ -364,18 +439,9 @@
         "difficulty": "Medium",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Arborio Rice",
-            "quantity": "1 1/2 cups"
-          },
-          {
-            "name": "Mushrooms",
-            "quantity": "300g, sliced"
-          },
-          {
-            "name": "Vegetable Stock",
-            "quantity": "4 cups, hot"
-          }
+          {"name": "Arborio Rice", "quantity": "1 1/2 cups"},
+          {"name": "Mushrooms", "quantity": "300g, sliced"},
+          {"name": "Vegetable Stock", "quantity": "4 cups, hot"}
         ],
         "steps": [
           "Sauté onions and garlic in olive oil",
@@ -396,7 +462,7 @@
         }
       },
       {
-        "id": 10,
+        "id": 15,
         "name": "Caprese Salad",
         "description": "A simple, fresh Italian salad showcasing ripe tomatoes, fresh mozzarella, and basil, drizzled with olive oil.",
         "image": "/Images/capresesalad.jpg",
@@ -404,18 +470,9 @@
         "difficulty": "Easy",
         "quantity": "Serves 2",
         "ingredients": [
-          {
-            "name": "Fresh Mozzarella",
-            "quantity": "200g, sliced"
-          },
-          {
-            "name": "Tomatoes",
-            "quantity": "2 large, sliced"
-          },
-          {
-            "name": "Fresh Basil",
-            "quantity": "1/2 cup leaves"
-          }
+          {"name": "Fresh Mozzarella", "quantity": "200g, sliced"},
+          {"name": "Tomatoes", "quantity": "2 large, sliced"},
+          {"name": "Fresh Basil", "quantity": "1/2 cup leaves"}
         ],
         "steps": [
           "Arrange alternating slices of tomato and mozzarella",
@@ -433,6 +490,174 @@
           "carbs": "8g",
           "fat": "22g"
         }
+      },
+      {
+        "id": 16,
+        "name": "Minestrone Soup",
+        "description": "Hearty Italian vegetable soup with beans and pasta, perfect for cold days with crusty bread.",
+        "image": "/Images/minestrone.jpg",
+        "time": "45 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 6",
+        "ingredients": [
+          {"name": "Mixed Vegetables", "quantity": "3 cups (carrots, celery, zucchini)"},
+          {"name": "Cannellini Beans", "quantity": "1 can, drained"},
+          {"name": "Small Pasta", "quantity": "1/2 cup"},
+          {"name": "Vegetable Stock", "quantity": "6 cups"},
+          {"name": "Parmesan Rind", "quantity": "1 (optional)"}
+        ],
+        "steps": [
+          "Sauté onions, carrots, and celery in olive oil",
+          "Add garlic and cook until fragrant",
+          "Add stock, tomatoes, and Parmesan rind",
+          "Simmer for 20 minutes",
+          "Add pasta and beans, cook until pasta is done"
+        ],
+        "tips": [
+          "Add greens like spinach at the end",
+          "Better the next day as flavors develop"
+        ],
+        "nutrition": {
+          "calories": "220 kcal",
+          "protein": "10g",
+          "carbs": "35g",
+          "fat": "5g"
+        }
+      },
+      {
+        "id": 17,
+        "name": "Focaccia Bread",
+        "description": "Classic Italian flatbread with dimpled surface, perfect for sandwiches or dipping in olive oil.",
+        "image": "/Images/focaccia.jpg",
+        "time": "2 hours (includes rising)",
+        "difficulty": "Medium",
+        "quantity": "Makes 1 large loaf",
+        "ingredients": [
+          {"name": "Bread Flour", "quantity": "4 cups"},
+          {"name": "Warm Water", "quantity": "1 1/3 cups"},
+          {"name": "Olive Oil", "quantity": "1/4 cup + more for drizzling"},
+          {"name": "Fresh Rosemary", "quantity": "2 tbsp, chopped"},
+          {"name": "Coarse Salt", "quantity": "1 tsp"}
+        ],
+        "steps": [
+          "Mix flour, water, yeast, and salt to form dough",
+          "Knead until smooth and elastic",
+          "Let rise until doubled in size",
+          "Press into oiled baking sheet, dimple surface",
+          "Drizzle with oil, sprinkle rosemary and salt",
+          "Bake at 425°F (220°C) for 20-25 minutes"
+        ],
+        "tips": [
+          "Use high-quality olive oil for best flavor",
+          "Let dough rise in warm place"
+        ],
+        "nutrition": {
+          "calories": "180 kcal per slice",
+          "protein": "5g",
+          "carbs": "30g",
+          "fat": "5g"
+        }
+      },
+      {
+        "id": 18,
+        "name": "Spinach Ricotta Stuffed Shells",
+        "description": "Jumbo pasta shells filled with creamy ricotta and spinach mixture, baked in marinara sauce.",
+        "image": "/Images/stuffedshells.jpg",
+        "time": "1 hour",
+        "difficulty": "Medium",
+        "quantity": "Serves 6",
+        "ingredients": [
+          {"name": "Jumbo Pasta Shells", "quantity": "24"},
+          {"name": "Ricotta Cheese", "quantity": "2 cups"},
+          {"name": "Spinach", "quantity": "10 oz, chopped"},
+          {"name": "Marinara Sauce", "quantity": "3 cups"},
+          {"name": "Mozzarella", "quantity": "1 1/2 cups, shredded"}
+        ],
+        "steps": [
+          "Cook shells according to package, drain",
+          "Mix ricotta, spinach, egg, and seasonings",
+          "Stuff shells with cheese mixture",
+          "Spread sauce in baking dish, arrange shells",
+          "Top with more sauce and mozzarella",
+          "Bake at 375°F (190°C) for 25 minutes"
+        ],
+        "tips": [
+          "Squeeze spinach dry before mixing",
+          "Can be assembled ahead and refrigerated"
+        ],
+        "nutrition": {
+          "calories": "380 kcal",
+          "protein": "20g",
+          "carbs": "45g",
+          "fat": "15g"
+        }
+      },
+      {
+        "id": 19,
+        "name": "Pesto Pasta",
+        "description": "Classic Ligurian pasta dish featuring fresh basil pesto sauce with pine nuts and Parmesan.",
+        "image": "/Images/pestopasta.jpg",
+        "time": "20 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Spaghetti", "quantity": "400g"},
+          {"name": "Fresh Basil", "quantity": "2 cups packed"},
+          {"name": "Pine Nuts", "quantity": "1/4 cup"},
+          {"name": "Parmesan", "quantity": "1/2 cup grated"},
+          {"name": "Garlic", "quantity": "2 cloves"}
+        ],
+        "steps": [
+          "Cook pasta according to package",
+          "Blend basil, pine nuts, garlic, and cheese",
+          "With motor running, drizzle in olive oil",
+          "Toss pesto with hot pasta",
+          "Add pasta water as needed to loosen sauce"
+        ],
+        "tips": [
+          "Toast pine nuts lightly for deeper flavor",
+          "Reserve some cooking water to adjust consistency"
+        ],
+        "nutrition": {
+          "calories": "450 kcal",
+          "protein": "15g",
+          "carbs": "50g",
+          "fat": "20g"
+        }
+      },
+      {
+        "id": 20,
+        "name": "Tiramisu",
+        "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream, dusted with cocoa.",
+        "image": "/Images/tiramisu.jpg",
+        "time": "40 minutes + chilling",
+        "difficulty": "Medium",
+        "quantity": "Serves 6",
+        "ingredients": [
+          {"name": "Ladyfingers", "quantity": "24"},
+          {"name": "Mascarpone", "quantity": "500g"},
+          {"name": "Eggs", "quantity": "3, separated"},
+          {"name": "Strong Coffee", "quantity": "1 cup, cooled"},
+          {"name": "Cocoa Powder", "quantity": "for dusting"}
+        ],
+        "steps": [
+          "Beat egg yolks with sugar until pale",
+          "Mix in mascarpone until smooth",
+          "Whisk egg whites to stiff peaks",
+          "Fold into mascarpone mixture",
+          "Layer with coffee-dipped ladyfingers",
+          "Chill for at least 4 hours"
+        ],
+        "tips": [
+          "Use freshly brewed espresso",
+          "Chill overnight for best texture"
+        ],
+        "nutrition": {
+          "calories": "420 kcal",
+          "protein": "10g",
+          "carbs": "35g",
+          "fat": "25g"
+        }
       }
     ]
   },
@@ -442,7 +667,7 @@
     "color": "#FF9AA2",
     "dishes": [
       {
-        "id": 11,
+        "id": 21,
         "name": "Vegetable Stir Fry",
         "description": "A quick and healthy mix of colorful vegetables cooked in a wok with garlic, ginger, and light sauce.",
         "image": "/Images/vegstirfry.jpg",
@@ -450,18 +675,9 @@
         "difficulty": "Easy",
         "quantity": "Serves 2",
         "ingredients": [
-          {
-            "name": "Broccoli",
-            "quantity": "1 cup, florets"
-          },
-          {
-            "name": "Bell Peppers",
-            "quantity": "1, sliced"
-          },
-          {
-            "name": "Carrots",
-            "quantity": "1, julienned"
-          }
+          {"name": "Broccoli", "quantity": "1 cup, florets"},
+          {"name": "Bell Peppers", "quantity": "1, sliced"},
+          {"name": "Carrots", "quantity": "1, julienned"}
         ],
         "steps": [
           "Heat oil in wok over high heat",
@@ -482,7 +698,7 @@
         }
       },
       {
-        "id": 12,
+        "id": 22,
         "name": "Vegetable Spring Rolls",
         "description": "Crispy fried rolls filled with shredded vegetables, served with sweet chili or soy dipping sauce.",
         "image": "/Images/vegspringrolls.jpg",
@@ -490,18 +706,9 @@
         "difficulty": "Medium",
         "quantity": "Makes 12 rolls",
         "ingredients": [
-          {
-            "name": "Spring Roll Wrappers",
-            "quantity": "12 sheets"
-          },
-          {
-            "name": "Cabbage",
-            "quantity": "1 cup, shredded"
-          },
-          {
-            "name": "Carrots",
-            "quantity": "1, julienned"
-          }
+          {"name": "Spring Roll Wrappers", "quantity": "12 sheets"},
+          {"name": "Cabbage", "quantity": "1 cup, shredded"},
+          {"name": "Carrots", "quantity": "1, julienned"}
         ],
         "steps": [
           "Sauté garlic and vegetables until softened",
@@ -522,7 +729,7 @@
         }
       },
       {
-        "id": 13,
+        "id": 23,
         "name": "Mapo Tofu (Vegetarian)",
         "description": "A spicy Sichuan-style tofu dish with mushrooms replacing the traditional pork, in a fiery chili bean sauce.",
         "image": "/Images/mapotofu.jpg",
@@ -530,18 +737,9 @@
         "difficulty": "Medium",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Firm Tofu",
-            "quantity": "400g, cubed"
-          },
-          {
-            "name": "Mushrooms",
-            "quantity": "1 cup, chopped"
-          },
-          {
-            "name": "Sichuan Peppercorns",
-            "quantity": "1 tsp"
-          }
+          {"name": "Firm Tofu", "quantity": "400g, cubed"},
+          {"name": "Mushrooms", "quantity": "1 cup, chopped"},
+          {"name": "Sichuan Peppercorns", "quantity": "1 tsp"}
         ],
         "steps": [
           "Toast Sichuan peppercorns and grind coarsely",
@@ -562,7 +760,7 @@
         }
       },
       {
-        "id": 14,
+        "id": 24,
         "name": "Vegetable Fried Rice",
         "description": "A versatile dish of stir-fried rice with mixed vegetables, customizable with whatever veggies you have on hand.",
         "image": "/Images/vegfriedrice.jpg",
@@ -570,18 +768,9 @@
         "difficulty": "Easy",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Cooked Rice",
-            "quantity": "3 cups, chilled"
-          },
-          {
-            "name": "Mixed Vegetables",
-            "quantity": "1 1/2 cups (peas, carrots, corn)"
-          },
-          {
-            "name": "Eggs",
-            "quantity": "2, beaten (optional)"
-          }
+          {"name": "Cooked Rice", "quantity": "3 cups, chilled"},
+          {"name": "Mixed Vegetables", "quantity": "1 1/2 cups (peas, carrots, corn)"},
+          {"name": "Eggs", "quantity": "2, beaten (optional)"}
         ],
         "steps": [
           "Heat oil, scramble eggs if using, then remove",
@@ -602,7 +791,7 @@
         }
       },
       {
-        "id": 15,
+        "id": 25,
         "name": "Hot and Sour Soup",
         "description": "A bold-flavored Chinese soup with tofu and mushrooms, featuring the perfect balance of spicy and tangy flavors.",
         "image": "/Images/hotandsour.jpg",
@@ -610,18 +799,9 @@
         "difficulty": "Medium",
         "quantity": "Serves 4",
         "ingredients": [
-          {
-            "name": "Vegetable Stock",
-            "quantity": "4 cups"
-          },
-          {
-            "name": "Tofu",
-            "quantity": "150g, julienned"
-          },
-          {
-            "name": "Mushrooms",
-            "quantity": "1 cup, sliced"
-          }
+          {"name": "Vegetable Stock", "quantity": "4 cups"},
+          {"name": "Tofu", "quantity": "150g, julienned"},
+          {"name": "Mushrooms", "quantity": "1 cup, sliced"}
         ],
         "steps": [
           "Bring stock to boil, add mushrooms",
@@ -640,6 +820,172 @@
           "carbs": "15g",
           "fat": "6g"
         }
+      },
+      {
+        "id": 26,
+        "name": "Vegetable Lo Mein",
+        "description": "Stir-fried noodles with crisp vegetables in a savory sauce, a Chinese takeout favorite made healthier at home.",
+        "image": "/Images/lo mein.jpg",
+        "time": "25 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 3",
+        "ingredients": [
+          {"name": "Egg Noodles", "quantity": "300g"},
+          {"name": "Mixed Vegetables", "quantity": "2 cups (bell peppers, cabbage, carrots)"},
+          {"name": "Soy Sauce", "quantity": "3 tbsp"},
+          {"name": "Sesame Oil", "quantity": "1 tsp"},
+          {"name": "Garlic", "quantity": "3 cloves, minced"}
+        ],
+        "steps": [
+          "Cook noodles according to package, drain",
+          "Heat oil in wok, stir-fry garlic until fragrant",
+          "Add vegetables and stir-fry until crisp-tender",
+          "Add noodles and sauce ingredients",
+          "Toss everything together until well combined"
+        ],
+        "tips": [
+          "Use fresh Chinese egg noodles for best texture",
+          "Add a splash of vegetarian oyster sauce for depth"
+        ],
+        "nutrition": {
+          "calories": "320 kcal",
+          "protein": "10g",
+          "carbs": "55g",
+          "fat": "8g"
+        }
+      },
+      {
+        "id": 27,
+        "name": "Vegetable Dumplings",
+        "description": "Delicate dough wrappers filled with seasoned vegetables, steamed or pan-fried to perfection.",
+        "image": "/Images/vegdumplings.jpg",
+        "time": "1 hour",
+        "difficulty": "Medium",
+        "quantity": "Makes 24 dumplings",
+        "ingredients": [
+          {"name": "Dumpling Wrappers", "quantity": "24 round"},
+          {"name": "Napa Cabbage", "quantity": "2 cups, finely chopped"},
+          {"name": "Shiitake Mushrooms", "quantity": "8, rehydrated and chopped"},
+          {"name": "Ginger", "quantity": "1 tbsp, grated"},
+          {"name": "Soy Sauce", "quantity": "2 tbsp"}
+        ],
+        "steps": [
+          "Salt cabbage and squeeze out excess water",
+          "Mix all filling ingredients thoroughly",
+          "Place small amount of filling in each wrapper",
+          "Fold and pleat edges to seal",
+          "Steam for 8-10 minutes or pan-fry until crispy"
+        ],
+        "tips": [
+          "Keep wrappers covered to prevent drying",
+          "Make extra and freeze for later use"
+        ],
+        "nutrition": {
+          "calories": "50 kcal per dumpling",
+          "protein": "2g",
+          "carbs": "8g",
+          "fat": "1g"
+        }
+      },
+      {
+        "id": 28,
+        "name": "Buddha's Delight",
+        "description": "A Buddhist vegetarian classic featuring an assortment of vegetables, tofu, and mushrooms in light sauce.",
+        "image": "/Images/buddhasdelight.jpg",
+        "time": "40 minutes",
+        "difficulty": "Medium",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Mixed Vegetables", "quantity": "4 cups (bok choy, carrots, snow peas)"},
+          {"name": "Tofu", "quantity": "200g, cubed"},
+          {"name": "Wood Ear Mushrooms", "quantity": "1/2 cup, rehydrated"},
+          {"name": "Bamboo Shoots", "quantity": "1/2 cup"},
+          {"name": "Vegetarian Oyster Sauce", "quantity": "2 tbsp"}
+        ],
+        "steps": [
+          "Blanch tougher vegetables first",
+          "Stir-fry garlic and ginger in hot oil",
+          "Add ingredients in order of cooking time",
+          "Add sauce and simmer briefly",
+          "Thicken with cornstarch slurry if desired"
+        ],
+        "tips": [
+          "Use high heat for authentic stir-fry",
+          "Add a splash of Shaoxing wine for depth"
+        ],
+        "nutrition": {
+          "calories": "180 kcal",
+          "protein": "12g",
+          "carbs": "20g",
+          "fat": "6g"
+        }
+      },
+      {
+        "id": 29,
+        "name": "Scallion Pancakes",
+        "description": "Flaky, layered flatbreads with scallions, crispy on the outside and tender inside, served with dipping sauce.",
+        "image": "/Images/scallionpancakes.jpg",
+        "time": "1 hour 30 minutes",
+        "difficulty": "Medium",
+        "quantity": "Makes 4 pancakes",
+        "ingredients": [
+          {"name": "All-Purpose Flour", "quantity": "2 cups"},
+          {"name": "Boiling Water", "quantity": "3/4 cup"},
+          {"name": "Scallions", "quantity": "1 cup, finely chopped"},
+          {"name": "Sesame Oil", "quantity": "2 tbsp"},
+          {"name": "Salt", "quantity": "1 tsp"}
+        ],
+        "steps": [
+          "Mix flour with boiling water to form dough",
+          "Knead until smooth, rest for 30 minutes",
+          "Divide into portions, roll out thinly",
+          "Brush with sesame oil, sprinkle scallions and salt",
+          "Roll up like jelly roll, then coil into spiral",
+          "Flatten and pan-fry until golden"
+        ],
+        "tips": [
+          "Don't skip the resting time for dough",
+          "Use medium heat to cook through without burning"
+        ],
+        "nutrition": {
+          "calories": "220 kcal per pancake",
+          "protein": "5g",
+          "carbs": "35g",
+          "fat": "7g"
+        }
+      },
+      {
+        "id": 30,
+        "name": "Sweet and Sour Tofu",
+        "description": "Crispy tofu cubes tossed in vibrant sweet and sour sauce with bell peppers and pineapple.",
+        "image": "/Images/sweetnsourtofu.jpg",
+        "time": "35 minutes",
+        "difficulty": "Medium",
+        "quantity": "Serves 3",
+        "ingredients": [
+          {"name": "Extra Firm Tofu", "quantity": "400g, cubed"},
+          {"name": "Bell Peppers", "quantity": "2, cubed"},
+          {"name": "Pineapple", "quantity": "1 cup, chunks"},
+          {"name": "Ketchup", "quantity": "1/4 cup"},
+          {"name": "Rice Vinegar", "quantity": "2 tbsp"}
+        ],
+        "steps": [
+          "Press tofu to remove excess water",
+          "Coat tofu in cornstarch and pan-fry until crispy",
+          "Sauté vegetables until crisp-tender",
+          "Combine sauce ingredients in separate pan",
+          "Add tofu and vegetables to sauce, toss to coat"
+        ],
+        "tips": [
+          "Use fresh pineapple for best flavor",
+          "Double fry tofu for extra crispiness"
+        ],
+        "nutrition": {
+          "calories": "280 kcal",
+          "protein": "15g",
+          "carbs": "35g",
+          "fat": "10g"
+        }
       }
     ]
   },
@@ -649,7 +995,7 @@
     "color": "#FFFACD",
     "dishes": [
       {
-        "id": 16,
+        "id": 31,
         "name": "Vegetable Quesadillas",
         "description": "Crispy tortillas filled with melted cheese and sautéed vegetables, perfect for a quick and satisfying meal.",
         "image": "/Images/vegquesedillas.jpg",
@@ -657,22 +1003,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 2",
         "ingredients": [
-          {
-            "name": "Flour Tortillas",
-            "quantity": "4 medium"
-          },
-          {
-            "name": "Bell Peppers",
-            "quantity": "1, sliced"
-          },
-          {
-            "name": "Onion",
-            "quantity": "1/2, sliced"
-          },
-          {
-            "name": "Cheese",
-            "quantity": "1 1/2 cups shredded"
-          }
+          {"name": "Flour Tortillas", "quantity": "4 medium"},
+          {"name": "Bell Peppers", "quantity": "1, sliced"},
+          {"name": "Onion", "quantity": "1/2, sliced"},
+          {"name": "Cheese", "quantity": "1 1/2 cups shredded"}
         ],
         "steps": [
           "Sauté vegetables with spices until tender",
@@ -693,7 +1027,7 @@
         }
       },
       {
-        "id": 17,
+        "id": 32,
         "name": "Vegetable Enchiladas",
         "description": "Corn tortillas rolled around a spiced vegetable filling, smothered in enchilada sauce and melted cheese.",
         "image": "/Images/vegenchiladas.jpg",
@@ -701,22 +1035,10 @@
         "difficulty": "Medium",
         "quantity": "Serves 4",
         "ingredients": [
-          {
-            "name": "Corn Tortillas",
-            "quantity": "8"
-          },
-          {
-            "name": "Black Beans",
-            "quantity": "1 cup, cooked"
-          },
-          {
-            "name": "Corn",
-            "quantity": "1 cup"
-          },
-          {
-            "name": "Enchilada Sauce",
-            "quantity": "2 cups"
-          }
+          {"name": "Corn Tortillas", "quantity": "8"},
+          {"name": "Black Beans", "quantity": "1 cup, cooked"},
+          {"name": "Corn", "quantity": "1 cup"},
+          {"name": "Enchilada Sauce", "quantity": "2 cups"}
         ],
         "steps": [
           "Sauté onions, garlic, and vegetables",
@@ -738,7 +1060,7 @@
         }
       },
       {
-        "id": 18,
+        "id": 33,
         "name": "Vegetable Fajitas",
         "description": "Sizzling platter of charred vegetables served with warm tortillas and all the classic fajita fixings.",
         "image": "/Images/veg fajitas.jpg",
@@ -746,22 +1068,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Bell Peppers",
-            "quantity": "2, sliced"
-          },
-          {
-            "name": "Onion",
-            "quantity": "1 large, sliced"
-          },
-          {
-            "name": "Zucchini",
-            "quantity": "1, sliced"
-          },
-          {
-            "name": "Fajita Seasoning",
-            "quantity": "1 tbsp"
-          }
+          {"name": "Bell Peppers", "quantity": "2, sliced"},
+          {"name": "Onion", "quantity": "1 large, sliced"},
+          {"name": "Zucchini", "quantity": "1, sliced"},
+          {"name": "Fajita Seasoning", "quantity": "1 tbsp"}
         ],
         "steps": [
           "Toss vegetables with seasoning",
@@ -781,7 +1091,7 @@
         }
       },
       {
-        "id": 19,
+        "id": 34,
         "name": "Vegetable Tacos",
         "description": "Soft corn tortillas filled with roasted sweet potatoes, black beans, and fresh toppings for a colorful meal.",
         "image": "/Images/vegTacos.jpg",
@@ -789,18 +1099,9 @@
         "difficulty": "Easy",
         "quantity": "Serves 3",
         "ingredients": [
-          {
-            "name": "Corn Tortillas",
-            "quantity": "8"
-          },
-          {
-            "name": "Sweet Potatoes",
-            "quantity": "2 cups, cubed and roasted"
-          },
-          {
-            "name": "Black Beans",
-            "quantity": "1 cup, cooked"
-          }
+          {"name": "Corn Tortillas", "quantity": "8"},
+          {"name": "Sweet Potatoes", "quantity": "2 cups, cubed and roasted"},
+          {"name": "Black Beans", "quantity": "1 cup, cooked"}
         ],
         "steps": [
           "Toss sweet potatoes with spices and roast at 400°F (200°C)",
@@ -821,7 +1122,7 @@
         }
       },
       {
-        "id": 20,
+        "id": 35,
         "name": "Vegetable Tamales",
         "description": "Traditional Mexican masa dough steamed in corn husks with a savory vegetable and cheese filling.",
         "image": "/Images/Vegtamales.jpg",
@@ -829,22 +1130,10 @@
         "difficulty": "Hard",
         "quantity": "Makes 12 tamales",
         "ingredients": [
-          {
-            "name": "Masa Harina",
-            "quantity": "2 cups"
-          },
-          {
-            "name": "Vegetable Broth",
-            "quantity": "1 1/2 cups"
-          },
-          {
-            "name": "Corn Husks",
-            "quantity": "12, soaked"
-          },
-          {
-            "name": "Filling: Zucchini, Corn, Cheese",
-            "quantity": "2 cups"
-          }
+          {"name": "Masa Harina", "quantity": "2 cups"},
+          {"name": "Vegetable Broth", "quantity": "1 1/2 cups"},
+          {"name": "Corn Husks", "quantity": "12, soaked"},
+          {"name": "Filling: Zucchini, Corn, Cheese", "quantity": "2 cups"}
         ],
         "steps": [
           "Beat shortening until fluffy, mix in masa ingredients",
@@ -863,6 +1152,170 @@
           "carbs": "25g",
           "fat": "12g"
         }
+      },
+      {
+        "id": 36,
+        "name": "Chiles Rellenos",
+        "description": "Poblano peppers stuffed with cheese, battered and fried, served with tomato sauce - a Mexican classic.",
+        "image": "/Images/chilesrellenos.jpg",
+        "time": "1 hour",
+        "difficulty": "Medium",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Poblano Peppers", "quantity": "4 large"},
+          {"name": "Queso Fresco", "quantity": "200g"},
+          {"name": "Eggs", "quantity": "3, separated"},
+          {"name": "Tomato Sauce", "quantity": "2 cups"}
+        ],
+        "steps": [
+          "Char peppers until blackened, then peel",
+          "Make slit, remove seeds, stuff with cheese",
+          "Beat egg whites, fold in yolks for batter",
+          "Dust peppers with flour, dip in batter",
+          "Fry until golden, serve with warm sauce"
+        ],
+        "tips": [
+          "Wear gloves when handling hot peppers",
+          "Make sauce while peppers roast"
+        ],
+        "nutrition": {
+          "calories": "320 kcal",
+          "protein": "15g",
+          "carbs": "25g",
+          "fat": "18g"
+        }
+      },
+      {
+        "id": 37,
+        "name": "Mexican Street Corn (Elote)",
+        "description": "Grilled corn on the cob slathered with creamy chili-lime mayo and crumbled cheese - irresistible street food.",
+        "image": "/Images/elote.jpg",
+        "time": "20 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Corn on the Cob", "quantity": "4"},
+          {"name": "Mayonnaise", "quantity": "1/4 cup"},
+          {"name": "Cotija Cheese", "quantity": "1/2 cup, crumbled"},
+          {"name": "Chili Powder", "quantity": "1 tsp"},
+          {"name": "Lime", "quantity": "1, cut into wedges"}
+        ],
+        "steps": [
+          "Grill corn until lightly charred",
+          "Mix mayo with lime juice and chili powder",
+          "Slather corn with mayo mixture",
+          "Sprinkle with cheese and more chili powder",
+          "Serve with lime wedges"
+        ],
+        "tips": [
+          "Use Mexican crema instead of mayo if available",
+          "Can be made with boiled corn too"
+        ],
+        "nutrition": {
+          "calories": "250 kcal",
+          "protein": "6g",
+          "carbs": "25g",
+          "fat": "15g"
+        }
+      },
+      {
+        "id": 38,
+        "name": "Black Bean Soup",
+        "description": "Hearty and flavorful soup made with black beans, vegetables, and Mexican spices, topped with avocado.",
+        "image": "/Images/blackbeansoup.jpg",
+        "time": "45 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Black Beans", "quantity": "2 cups cooked"},
+          {"name": "Vegetable Stock", "quantity": "4 cups"},
+          {"name": "Onion", "quantity": "1, chopped"},
+          {"name": "Cumin", "quantity": "1 tbsp"},
+          {"name": "Avocado", "quantity": "1, sliced for garnish"}
+        ],
+        "steps": [
+          "Sauté onions, garlic, and spices",
+          "Add beans and stock, bring to boil",
+          "Simmer for 20 minutes",
+          "Blend half the soup for creaminess",
+          "Serve with avocado, cilantro, and lime"
+        ],
+        "tips": [
+          "Use canned beans for quicker preparation",
+          "Add a chipotle pepper for smokiness"
+        ],
+        "nutrition": {
+          "calories": "280 kcal",
+          "protein": "12g",
+          "carbs": "45g",
+          "fat": "8g"
+        }
+      },
+      {
+        "id": 39,
+        "name": "Mexican Rice (Arroz Rojo)",
+        "description": "Fluffy rice cooked with tomatoes, onions, and garlic - the perfect side for any Mexican meal.",
+        "image": "/Images/mexicanrice.jpg",
+        "time": "35 minutes",
+        "difficulty": "Medium",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Long Grain Rice", "quantity": "1 1/2 cups"},
+          {"name": "Tomato", "quantity": "2, pureed"},
+          {"name": "Onion", "quantity": "1/2, finely chopped"},
+          {"name": "Garlic", "quantity": "3 cloves"},
+          {"name": "Vegetable Broth", "quantity": "2 1/2 cups"}
+        ],
+        "steps": [
+          "Rinse rice until water runs clear",
+          "Sauté rice in oil until golden",
+          "Add onion and garlic, cook until soft",
+          "Add tomato puree and cook until thickened",
+          "Add broth, cover, and simmer for 20 minutes"
+        ],
+        "tips": [
+          "Don't stir after adding broth",
+          "Let rest covered for 5 minutes after cooking"
+        ],
+        "nutrition": {
+          "calories": "220 kcal",
+          "protein": "4g",
+          "carbs": "45g",
+          "fat": "3g"
+        }
+      },
+      {
+        "id": 40,
+        "name": "Chilaquiles",
+        "description": "Crispy tortilla chips simmered in salsa, topped with cheese, crema, and eggs - perfect for brunch.",
+        "image": "/Images/chilaquiles.jpg",
+        "time": "30 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 3",
+        "ingredients": [
+          {"name": "Corn Tortillas", "quantity": "6, cut into triangles"},
+          {"name": "Salsa Verde", "quantity": "2 cups"},
+          {"name": "Queso Fresco", "quantity": "1/2 cup, crumbled"},
+          {"name": "Mexican Crema", "quantity": "1/4 cup"},
+          {"name": "Eggs", "quantity": "3 (optional)"}
+        ],
+        "steps": [
+          "Fry or bake tortilla chips until crisp",
+          "Heat salsa in large skillet",
+          "Add chips and toss to coat",
+          "Cook until chips soften slightly",
+          "Top with cheese, crema, and fried eggs"
+        ],
+        "tips": [
+          "Use day-old tortillas for better chips",
+          "Adjust salsa heat to preference"
+        ],
+        "nutrition": {
+          "calories": "350 kcal",
+          "protein": "10g",
+          "carbs": "40g",
+          "fat": "18g"
+        }
       }
     ]
   },
@@ -872,7 +1325,7 @@
     "color": "#C7CEEA",
     "dishes": [
       {
-        "id": 21,
+        "id": 41,
         "name": "Chocolate Lava Cake",
         "description": "Individual chocolate cakes with a molten center that flows out when cut into, served warm with ice cream.",
         "image": "/Images/chocolavacake.jpg",
@@ -880,22 +1333,10 @@
         "difficulty": "Medium",
         "quantity": "Serves 2",
         "ingredients": [
-          {
-            "name": "Dark Chocolate",
-            "quantity": "100g"
-          },
-          {
-            "name": "Butter",
-            "quantity": "100g"
-          },
-          {
-            "name": "Eggs",
-            "quantity": "2"
-          },
-          {
-            "name": "Sugar",
-            "quantity": "50g"
-          }
+          {"name": "Dark Chocolate", "quantity": "100g"},
+          {"name": "Butter", "quantity": "100g"},
+          {"name": "Eggs", "quantity": "2"},
+          {"name": "Sugar", "quantity": "50g"}
         ],
         "steps": [
           "Melt chocolate and butter together",
@@ -916,7 +1357,7 @@
         }
       },
       {
-        "id": 22,
+        "id": 42,
         "name": "Tiramisu",
         "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream, dusted with cocoa.",
         "image": "/Images/tiramisu.jpg",
@@ -924,22 +1365,10 @@
         "difficulty": "Medium",
         "quantity": "Serves 6",
         "ingredients": [
-          {
-            "name": "Ladyfingers",
-            "quantity": "24"
-          },
-          {
-            "name": "Mascarpone",
-            "quantity": "500g"
-          },
-          {
-            "name": "Eggs",
-            "quantity": "3, separated"
-          },
-          {
-            "name": "Strong Coffee",
-            "quantity": "1 cup, cooled"
-          }
+          {"name": "Ladyfingers", "quantity": "24"},
+          {"name": "Mascarpone", "quantity": "500g"},
+          {"name": "Eggs", "quantity": "3, separated"},
+          {"name": "Strong Coffee", "quantity": "1 cup, cooled"}
         ],
         "steps": [
           "Beat egg yolks with sugar until pale",
@@ -961,7 +1390,7 @@
         }
       },
       {
-        "id": 23,
+        "id": 43,
         "name": "Fruit Tart",
         "description": "Buttery shortcrust pastry filled with vanilla pastry cream and topped with fresh seasonal fruits.",
         "image": "/Images/fruittart.jpg",
@@ -969,26 +1398,11 @@
         "difficulty": "Medium",
         "quantity": "Serves 8",
         "ingredients": [
-          {
-            "name": "Flour",
-            "quantity": "1 1/2 cups"
-          },
-          {
-            "name": "Butter",
-            "quantity": "1/2 cup, cold"
-          },
-          {
-            "name": "Egg Yolk",
-            "quantity": "1"
-          },
-          {
-            "name": "Pastry Cream",
-            "quantity": "1 1/2 cups"
-          },
-          {
-            "name": "Assorted Fruits",
-            "quantity": "2 cups"
-          }
+          {"name": "Flour", "quantity": "1 1/2 cups"},
+          {"name": "Butter", "quantity": "1/2 cup, cold"},
+          {"name": "Egg Yolk", "quantity": "1"},
+          {"name": "Pastry Cream", "quantity": "1 1/2 cups"},
+          {"name": "Assorted Fruits", "quantity": "2 cups"}
         ],
         "steps": [
           "Make crust by pulsing dry ingredients with butter",
@@ -1010,7 +1424,7 @@
         }
       },
       {
-        "id": 24,
+        "id": 44,
         "name": "Crème Brûlée",
         "description": "Classic French dessert featuring rich vanilla custard with a contrasting layer of hard caramelized sugar on top.",
         "image": "/Images/cremebrulee.jpg",
@@ -1018,22 +1432,10 @@
         "difficulty": "Medium",
         "quantity": "Serves 4",
         "ingredients": [
-          {
-            "name": "Heavy Cream",
-            "quantity": "2 cups"
-          },
-          {
-            "name": "Vanilla Bean",
-            "quantity": "1 or 1 tsp extract"
-          },
-          {
-            "name": "Egg Yolks",
-            "quantity": "5"
-          },
-          {
-            "name": "Sugar",
-            "quantity": "1/3 cup + extra for topping"
-          }
+          {"name": "Heavy Cream", "quantity": "2 cups"},
+          {"name": "Vanilla Bean", "quantity": "1 or 1 tsp extract"},
+          {"name": "Egg Yolks", "quantity": "5"},
+          {"name": "Sugar", "quantity": "1/3 cup + extra for topping"}
         ],
         "steps": [
           "Heat cream with vanilla until simmering",
@@ -1055,7 +1457,7 @@
         }
       },
       {
-        "id": 25,
+        "id": 45,
         "name": "Cheesecake",
         "description": "Creamy New York-style cheesecake with a graham cracker crust, perfect plain or with fruit topping.",
         "image": "/Images/Chessecake.jpg",
@@ -1063,26 +1465,11 @@
         "difficulty": "Medium",
         "quantity": "Serves 8",
         "ingredients": [
-          {
-            "name": "Graham Cracker Crumbs",
-            "quantity": "1 1/2 cups"
-          },
-          {
-            "name": "Butter",
-            "quantity": "1/3 cup, melted"
-          },
-          {
-            "name": "Cream Cheese",
-            "quantity": "900g, room temperature"
-          },
-          {
-            "name": "Sour Cream",
-            "quantity": "1 cup"
-          },
-          {
-            "name": "Eggs",
-            "quantity": "3"
-          }
+          {"name": "Graham Cracker Crumbs", "quantity": "1 1/2 cups"},
+          {"name": "Butter", "quantity": "1/3 cup, melted"},
+          {"name": "Cream Cheese", "quantity": "900g, room temperature"},
+          {"name": "Sour Cream", "quantity": "1 cup"},
+          {"name": "Eggs", "quantity": "3"}
         ],
         "steps": [
           "Mix crumbs with melted butter, press into pan",
@@ -1102,6 +1489,172 @@
           "carbs": "35g",
           "fat": "35g"
         }
+      },
+      {
+        "id": 46,
+        "name": "Chocolate Mousse",
+        "description": "Light yet decadent French dessert made with whipped cream and melted chocolate, with an airy texture.",
+        "image": "/Images/chocomousse.jpg",
+        "time": "30 minutes + chilling",
+        "difficulty": "Medium",
+        "quantity": "Serves 6",
+        "ingredients": [
+          {"name": "Dark Chocolate", "quantity": "200g"},
+          {"name": "Heavy Cream", "quantity": "1 1/2 cups"},
+          {"name": "Egg Whites", "quantity": "3"},
+          {"name": "Sugar", "quantity": "2 tbsp"}
+        ],
+        "steps": [
+          "Melt chocolate over double boiler",
+          "Whip cream to soft peaks",
+          "Beat egg whites with sugar to stiff peaks",
+          "Fold chocolate into cream gently",
+          "Carefully fold in egg whites",
+          "Chill for at least 4 hours"
+        ],
+        "tips": [
+          "Use high-quality chocolate for best results",
+          "Don't overmix when combining ingredients"
+        ],
+        "nutrition": {
+          "calories": "320 kcal",
+          "protein": "5g",
+          "carbs": "20g",
+          "fat": "25g"
+        }
+      },
+      {
+        "id": 47,
+        "name": "Apple Pie",
+        "description": "Classic American dessert with flaky crust and cinnamon-spiced apple filling, best served warm.",
+        "image": "/Images/applepie.jpg",
+        "time": "1 hour 30 minutes",
+        "difficulty": "Medium",
+        "quantity": "Serves 8",
+        "ingredients": [
+          {"name": "Pie Crust", "quantity": "2 (top and bottom)"},
+          {"name": "Apples", "quantity": "6 cups, peeled and sliced"},
+          {"name": "Sugar", "quantity": "3/4 cup"},
+          {"name": "Cinnamon", "quantity": "1 tsp"},
+          {"name": "Butter", "quantity": "2 tbsp"}
+        ],
+        "steps": [
+          "Mix apples with sugar, cinnamon, and flour",
+          "Line pie dish with bottom crust",
+          "Add apple filling, dot with butter",
+          "Cover with top crust, vent steam",
+          "Bake at 375°F (190°C) for 50 minutes"
+        ],
+        "tips": [
+          "Use mix of tart and sweet apples",
+          "Brush crust with egg wash for shine"
+        ],
+        "nutrition": {
+          "calories": "320 kcal",
+          "protein": "3g",
+          "carbs": "55g",
+          "fat": "12g"
+        }
+      },
+      {
+        "id": 48,
+        "name": "Panna Cotta",
+        "description": "Italian cooked cream dessert set with gelatin, silky smooth and often served with berry sauce.",
+        "image": "/Images/pannacotta.jpg",
+        "time": "20 minutes + chilling",
+        "difficulty": "Easy",
+        "quantity": "Serves 6",
+        "ingredients": [
+          {"name": "Heavy Cream", "quantity": "2 cups"},
+          {"name": "Milk", "quantity": "1 cup"},
+          {"name": "Sugar", "quantity": "1/3 cup"},
+          {"name": "Gelatin", "quantity": "2 tsp"},
+          {"name": "Vanilla", "quantity": "1 tsp"}
+        ],
+        "steps": [
+          "Bloom gelatin in cold milk",
+          "Heat cream and sugar until steaming",
+          "Add gelatin mixture and stir to dissolve",
+          "Strain into ramekins and chill 4+ hours",
+          "Serve with berry compote or caramel"
+        ],
+        "tips": [
+          "Don't boil the cream mixture",
+          "Dip ramekins in hot water to unmold"
+        ],
+        "nutrition": {
+          "calories": "280 kcal",
+          "protein": "3g",
+          "carbs": "20g",
+          "fat": "20g"
+        }
+      },
+      {
+        "id": 49,
+        "name": "Red Velvet Cake",
+        "description": "Striking red-colored cake with subtle cocoa flavor, paired with creamy cheese frosting.",
+        "image": "/Images/redvelvet.jpg",
+        "time": "1 hour 30 minutes",
+        "difficulty": "Medium",
+        "quantity": "Serves 12",
+        "ingredients": [
+          {"name": "Flour", "quantity": "2 1/2 cups"},
+          {"name": "Buttermilk", "quantity": "1 cup"},
+          {"name": "Cocoa Powder", "quantity": "2 tbsp"},
+          {"name": "Red Food Coloring", "quantity": "2 tbsp"},
+          {"name": "Cream Cheese", "quantity": "450g (for frosting)"}
+        ],
+        "steps": [
+          "Cream butter and sugar until light",
+          "Add eggs one at a time",
+          "Alternate dry ingredients with buttermilk",
+          "Add coloring and vanilla",
+          "Bake at 350°F (175°C) for 25-30 minutes",
+          "Frost with cream cheese frosting when cool"
+        ],
+        "tips": [
+          "Use gel food coloring for vibrant color",
+          "Don't overmix the batter"
+        ],
+        "nutrition": {
+          "calories": "450 kcal",
+          "protein": "6g",
+          "carbs": "60g",
+          "fat": "20g"
+        }
+      },
+      {
+        "id": 50,
+        "name": "Baklava",
+        "description": "Sweet Middle Eastern pastry made of phyllo dough layers with nuts and honey syrup.",
+        "image": "/Images/baklava.jpg",
+        "time": "1 hour 30 minutes",
+        "difficulty": "Hard",
+        "quantity": "Makes 24 pieces",
+        "ingredients": [
+          {"name": "Phyllo Dough", "quantity": "1 lb package"},
+          {"name": "Mixed Nuts", "quantity": "3 cups, finely chopped"},
+          {"name": "Butter", "quantity": "1 cup, melted"},
+          {"name": "Honey", "quantity": "1 cup"},
+          {"name": "Cinnamon", "quantity": "1 tsp"}
+        ],
+        "steps": [
+          "Mix nuts with sugar and cinnamon",
+          "Layer phyllo sheets, brushing with butter",
+          "Add nut mixture every few layers",
+          "Cut before baking at 350°F (175°C) for 45 minutes",
+          "Pour cooled syrup over hot baklava"
+        ],
+        "tips": [
+          "Keep phyllo covered with damp towel",
+          "Let baklava sit overnight before serving"
+        ],
+        "nutrition": {
+          "calories": "280 kcal per piece",
+          "protein": "4g",
+          "carbs": "30g",
+          "fat": "18g"
+        }
       }
     ]
   },
@@ -1111,7 +1664,7 @@
     "color": "#B5EAD7",
     "dishes": [
       {
-        "id": 26,
+        "id": 51,
         "name": "Mango Lassi",
         "description": "A refreshing Indian yogurt-based drink blending sweet mango with creamy yogurt and a hint of cardamom.",
         "image": "/Images/mangolassi.jpg",
@@ -1119,22 +1672,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 2",
         "ingredients": [
-          {
-            "name": "Ripe Mango",
-            "quantity": "1 cup, chopped"
-          },
-          {
-            "name": "Yogurt",
-            "quantity": "1 cup"
-          },
-          {
-            "name": "Milk",
-            "quantity": "1/2 cup"
-          },
-          {
-            "name": "Sugar",
-            "quantity": "2 tbsp (or to taste)"
-          }
+          {"name": "Ripe Mango", "quantity": "1 cup, chopped"},
+          {"name": "Yogurt", "quantity": "1 cup"},
+          {"name": "Milk", "quantity": "1/2 cup"},
+          {"name": "Sugar", "quantity": "2 tbsp (or to taste)"}
         ],
         "steps": [
           "Blend all ingredients until smooth",
@@ -1153,7 +1694,7 @@
         }
       },
       {
-        "id": 27,
+        "id": 52,
         "name": "Mojito (Virgin)",
         "description": "A refreshing mocktail version of the classic mojito, with lime, mint, and soda water for a cooling drink.",
         "image": "/Images/mojito.jpg",
@@ -1161,22 +1702,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 1",
         "ingredients": [
-          {
-            "name": "Lime",
-            "quantity": "1, cut into wedges"
-          },
-          {
-            "name": "Mint Leaves",
-            "quantity": "10"
-          },
-          {
-            "name": "Soda Water",
-            "quantity": "1 cup"
-          },
-          {
-            "name": "Sugar",
-            "quantity": "2 tsp"
-          }
+          {"name": "Lime", "quantity": "1, cut into wedges"},
+          {"name": "Mint Leaves", "quantity": "10"},
+          {"name": "Soda Water", "quantity": "1 cup"},
+          {"name": "Sugar", "quantity": "2 tsp"}
         ],
         "steps": [
           "Muddle lime wedges, mint, and sugar in glass",
@@ -1196,7 +1725,7 @@
         }
       },
       {
-        "id": 28,
+        "id": 53,
         "name": "Smoothie Bowl",
         "description": "A thick, creamy smoothie served in a bowl and topped with fresh fruits, nuts, and seeds for a nutritious breakfast.",
         "image": "/Images/SmoothieBowl.jpg",
@@ -1204,22 +1733,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 1",
         "ingredients": [
-          {
-            "name": "Frozen Banana",
-            "quantity": "1"
-          },
-          {
-            "name": "Frozen Berries",
-            "quantity": "1/2 cup"
-          },
-          {
-            "name": "Yogurt",
-            "quantity": "1/4 cup"
-          },
-          {
-            "name": "Milk",
-            "quantity": "1/4 cup"
-          }
+          {"name": "Frozen Banana", "quantity": "1"},
+          {"name": "Frozen Berries", "quantity": "1/2 cup"},
+          {"name": "Yogurt", "quantity": "1/4 cup"},
+          {"name": "Milk", "quantity": "1/4 cup"}
         ],
         "steps": [
           "Blend frozen fruits with yogurt and milk until thick",
@@ -1239,7 +1756,7 @@
         }
       },
       {
-        "id": 29,
+        "id": 54,
         "name": "Iced Matcha Latte",
         "description": "A refreshing Japanese-inspired drink featuring vibrant green matcha powder blended with milk over ice.",
         "image": "/Images/IcedMatchaLatte.jpg",
@@ -1247,22 +1764,10 @@
         "difficulty": "Easy",
         "quantity": "Serves 1",
         "ingredients": [
-          {
-            "name": "Matcha Powder",
-            "quantity": "1 tsp"
-          },
-          {
-            "name": "Hot Water",
-            "quantity": "2 tbsp"
-          },
-          {
-            "name": "Milk",
-            "quantity": "1 cup (dairy or plant-based)"
-          },
-          {
-            "name": "Honey",
-            "quantity": "1 tsp (or to taste)"
-          }
+          {"name": "Matcha Powder", "quantity": "1 tsp"},
+          {"name": "Hot Water", "quantity": "2 tbsp"},
+          {"name": "Milk", "quantity": "1 cup (dairy or plant-based)"},
+          {"name": "Honey", "quantity": "1 tsp (or to taste)"}
         ],
         "steps": [
           "Whisk matcha with hot water until frothy",
@@ -1272,61 +1777,554 @@
           "Stir gently before drinking"
         ],
         "tips": [
-          "Sift matcha powder to prevent clumps.",
-          "Use a bamboo whisk for authentic preparation."
-        ]
+          "Sift matcha powder to prevent clumps",
+          "Use a bamboo whisk for authentic preparation"
+        ],
+        "nutrition": {
+          "calories": "120 kcal",
+          "protein": "6g",
+          "carbs": "15g",
+          "fat": "4g"
+        }
       },
       {
-        "id": 30,
+        "id": 55,
         "name": "Hot Chocolate",
         "description": "A rich, comforting drink made with real chocolate melted into warm milk, topped with whipped cream.",
         "image": "/Images/HotChocolate.jpg",
         "time": "15 minutes",
-        "quantity": "Serves 2",
         "difficulty": "Easy",
+        "quantity": "Serves 2",
         "ingredients": [
-          {
-            "name": "Milk",
-            "quantity": "2 cups"
-          },
-          {
-            "name": "Dark Chocolate",
-            "quantity": "100g, chopped"
-          },
-          {
-            "name": "Cocoa Powder",
-            "quantity": "1 tbsp"
-          },
-          {
-            "name": "Sugar",
-            "quantity": "1 tbsp (optional)"
-          },
-          {
-            "name": "Vanilla Extract",
-            "quantity": "1/2 tsp"
-          },
-          {
-            "name": "Whipped Cream",
-            "quantity": "for topping"
-          }
+          {"name": "Milk", "quantity": "2 cups"},
+          {"name": "Dark Chocolate", "quantity": "100g, chopped"},
+          {"name": "Cocoa Powder", "quantity": "1 tbsp"},
+          {"name": "Sugar", "quantity": "1 tbsp (optional)"},
+          {"name": "Vanilla Extract", "quantity": "1/2 tsp"}
         ],
         "steps": [
-          "Heat milk gently until steaming but not boiling.",
-          "Whisk in chocolate until melted.",
-          "Add cocoa powder and sugar if using.",
-          "Stir in vanilla.",
-          "Pour into mugs and top with whipped cream."
+          "Heat milk gently until steaming but not boiling",
+          "Whisk in chocolate until melted",
+          "Add cocoa powder and sugar if using",
+          "Stir in vanilla",
+          "Pour into mugs and top with whipped cream"
+        ],
+        "tips": [
+          "Use high-quality chocolate for best flavor",
+          "Add a pinch of cinnamon or chili for variation"
         ],
         "nutrition": {
           "calories": "320 kcal",
           "protein": "8g",
           "carbs": "30g",
           "fat": "18g"
-        },
+        }
+      },
+      {
+        "id": 56,
+        "name": "Strawberry Lemonade",
+        "description": "Sweet-tart homemade lemonade with fresh strawberry puree for a fruity twist on the classic.",
+        "image": "/Images/strawberrylemonade.jpg",
+        "time": "20 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Lemons", "quantity": "6, juiced"},
+          {"name": "Strawberries", "quantity": "1 cup, hulled"},
+          {"name": "Sugar", "quantity": "1/2 cup"},
+          {"name": "Water", "quantity": "4 cups"},
+          {"name": "Ice", "quantity": "for serving"}
+        ],
+        "steps": [
+          "Make simple syrup by heating sugar with 1 cup water",
+          "Blend strawberries into puree",
+          "Mix lemon juice, strawberry puree, and syrup",
+          "Add remaining water and chill",
+          "Serve over ice with strawberry garnish"
+        ],
         "tips": [
-          "Use high-quality chocolate for best flavor.",
-          "Add a pinch of cinnamon or chili for variation."
-        ]
+          "Adjust sweetness to taste",
+          "Muddle mint leaves for herbal variation"
+        ],
+        "nutrition": {
+          "calories": "120 kcal",
+          "protein": "1g",
+          "carbs": "30g",
+          "fat": "0g"
+        }
+      },
+      {
+        "id": 57,
+        "name": "Chai Tea Latte",
+        "description": "Spiced Indian tea with milk, combining black tea with warming spices like cardamom and ginger.",
+        "image": "/Images/chailatte.jpg",
+        "time": "15 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 2",
+        "ingredients": [
+          {"name": "Black Tea", "quantity": "2 tsp or 2 bags"},
+          {"name": "Milk", "quantity": "2 cups"},
+          {"name": "Cardamom", "quantity": "4 pods, crushed"},
+          {"name": "Cinnamon", "quantity": "1 stick"},
+          {"name": "Ginger", "quantity": "1/2 inch, sliced"}
+        ],
+        "steps": [
+          "Crush spices lightly to release flavors",
+          "Simmer spices in water for 5 minutes",
+          "Add tea and steep for 3-4 minutes",
+          "Add milk and heat until steaming",
+          "Strain and sweeten to taste"
+        ],
+        "tips": [
+          "Use whole spices for best flavor",
+          "Froth milk for cafe-style presentation"
+        ],
+        "nutrition": {
+          "calories": "100 kcal",
+          "protein": "6g",
+          "carbs": "10g",
+          "fat": "4g"
+        }
+      },
+      {
+        "id": 58,
+        "name": "Bubble Tea",
+        "description": "Taiwanese milk tea with chewy tapioca pearls, customizable with different flavors and toppings.",
+        "image": "/Images/bubbletea.jpg",
+        "time": "30 minutes",
+        "difficulty": "Medium",
+        "quantity": "Serves 2",
+        "ingredients": [
+          {"name": "Black Tea", "quantity": "2 cups, strong brewed"},
+          {"name": "Tapioca Pearls", "quantity": "1/2 cup, dried"},
+          {"name": "Milk", "quantity": "1/2 cup"},
+          {"name": "Brown Sugar", "quantity": "1/4 cup"},
+          {"name": "Ice", "quantity": "for serving"}
+        ],
+        "steps": [
+          "Cook tapioca pearls according to package",
+          "Make syrup by melting brown sugar with water",
+          "Toss cooked pearls in some syrup",
+          "Mix tea with milk and remaining syrup",
+          "Assemble with pearls, ice, and tea mixture"
+        ],
+        "tips": [
+          "Use quick-cooking pearls for convenience",
+          "Adjust sweetness to preference"
+        ],
+        "nutrition": {
+          "calories": "250 kcal",
+          "protein": "3g",
+          "carbs": "55g",
+          "fat": "3g"
+        }
+      },
+      {
+        "id": 59,
+        "name": "Turmeric Golden Milk",
+        "description": "Warming Ayurvedic drink with turmeric, ginger, and milk, known for its anti-inflammatory properties.",
+        "image": "/Images/goldenmilk.jpg",
+        "time": "15 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 2",
+        "ingredients": [
+          {"name": "Milk", "quantity": "2 cups (dairy or plant-based)"},
+          {"name": "Turmeric", "quantity": "1 tsp"},
+          {"name": "Ginger", "quantity": "1/2 tsp, grated"},
+          {"name": "Cinnamon", "quantity": "1/2 tsp"},
+          {"name": "Black Pepper", "quantity": "pinch"},
+          {"name": "Honey", "quantity": "1 tsp (optional)"}
+        ],
+        "steps": [
+          "Whisk all ingredients except honey in saucepan",
+          "Heat gently until steaming but not boiling",
+          "Strain if desired",
+          "Sweeten with honey if using",
+          "Serve warm"
+        ],
+        "tips": [
+          "Add coconut oil for creaminess",
+          "Black pepper enhances turmeric absorption"
+        ],
+        "nutrition": {
+          "calories": "120 kcal",
+          "protein": "6g",
+          "carbs": "10g",
+          "fat": "5g"
+        }
+      },
+      {
+        "id": 60,
+        "name": "Watermelon Agua Fresca",
+        "description": "Light and refreshing Mexican-style fruit drink made with blended watermelon and lime.",
+        "image": "/Images/aguafresca.jpg",
+        "time": "10 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Watermelon", "quantity": "4 cups, cubed"},
+          {"name": "Lime Juice", "quantity": "2 tbsp"},
+          {"name": "Water", "quantity": "1 cup"},
+          {"name": "Mint Leaves", "quantity": "for garnish"}
+        ],
+        "steps": [
+          "Blend watermelon until smooth",
+          "Strain through fine mesh sieve",
+          "Add water and lime juice",
+          "Chill and serve over ice",
+          "Garnish with mint"
+        ],
+        "tips": [
+          "Use very ripe watermelon for sweetness",
+          "Add a splash of soda water for fizz"
+        ],
+        "nutrition": {
+          "calories": "60 kcal",
+          "protein": "1g",
+          "carbs": "15g",
+          "fat": "0g"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Mediterranean",
+    "emoji": "🥙",
+    "color": "#FFDAC1",
+    "dishes": [
+      {
+        "id": 61,
+        "name": "Greek Salad",
+        "description": "Fresh and vibrant salad with crisp vegetables, olives, and feta cheese, dressed with olive oil and oregano.",
+        "image": "/Images/greeksalad.jpg",
+        "time": "15 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Cucumber", "quantity": "1 large, chopped"},
+          {"name": "Tomatoes", "quantity": "4 medium, chopped"},
+          {"name": "Red Onion", "quantity": "1/2, thinly sliced"},
+          {"name": "Feta Cheese", "quantity": "200g, cubed"},
+          {"name": "Kalamata Olives", "quantity": "1/2 cup"}
+        ],
+        "steps": [
+          "Combine all vegetables in large bowl",
+          "Add olives and feta cheese",
+          "Drizzle with olive oil and lemon juice",
+          "Sprinkle with dried oregano",
+          "Toss gently and serve"
+        ],
+        "tips": [
+          "Use ripe, in-season tomatoes",
+          "Let salad sit for 10 minutes before serving"
+        ],
+        "nutrition": {
+          "calories": "220 kcal",
+          "protein": "6g",
+          "carbs": "10g",
+          "fat": "18g"
+        }
+      },
+      {
+        "id": 62,
+        "name": "Hummus",
+        "description": "Creamy Middle Eastern chickpea dip with tahini, lemon, and garlic, perfect with pita bread.",
+        "image": "/Images/hummus.jpg",
+        "time": "15 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 6",
+        "ingredients": [
+          {"name": "Chickpeas", "quantity": "2 cups cooked"},
+          {"name": "Tahini", "quantity": "1/4 cup"},
+          {"name": "Lemon Juice", "quantity": "3 tbsp"},
+          {"name": "Garlic", "quantity": "2 cloves"},
+          {"name": "Olive Oil", "quantity": "2 tbsp"}
+        ],
+        "steps": [
+          "Drain chickpeas, reserve some liquid",
+          "Blend all ingredients until smooth",
+          "Add reserved liquid as needed for consistency",
+          "Drizzle with olive oil to serve",
+          "Garnish with paprika and parsley"
+        ],
+        "tips": [
+          "Peel chickpeas for extra smooth texture",
+          "Adjust lemon and garlic to taste"
+        ],
+        "nutrition": {
+          "calories": "180 kcal",
+          "protein": "6g",
+          "carbs": "15g",
+          "fat": "10g"
+        }
+      },
+      {
+        "id": 63,
+        "name": "Falafel",
+        "description": "Crispy fried chickpea patties with herbs and spices, a popular Middle Eastern street food.",
+        "image": "/Images/falafel.jpg",
+        "time": "30 minutes (plus soaking)",
+        "difficulty": "Medium",
+        "quantity": "Makes 18 falafel",
+        "ingredients": [
+          {"name": "Dried Chickpeas", "quantity": "1 cup, soaked overnight"},
+          {"name": "Parsley", "quantity": "1 cup, packed"},
+          {"name": "Cilantro", "quantity": "1/2 cup, packed"},
+          {"name": "Garlic", "quantity": "4 cloves"},
+          {"name": "Cumin", "quantity": "1 tsp"}
+        ],
+        "steps": [
+          "Drain soaked chickpeas",
+          "Pulse all ingredients in food processor",
+          "Form into small patties",
+          "Fry in hot oil until golden brown",
+          "Drain on paper towels"
+        ],
+        "tips": [
+          "Don't use canned chickpeas",
+          "Chill mixture before forming for better texture"
+        ],
+        "nutrition": {
+          "calories": "60 kcal per falafel",
+          "protein": "3g",
+          "carbs": "8g",
+          "fat": "2g"
+        }
+      },
+      {
+        "id": 64,
+        "name": "Baba Ganoush",
+        "description": "Smoky roasted eggplant dip with tahini, garlic, and lemon, a delicious alternative to hummus.",
+        "image": "/Images/babaganoush.jpg",
+        "time": "50 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 6",
+        "ingredients": [
+          {"name": "Eggplant", "quantity": "2 large"},
+          {"name": "Tahini", "quantity": "1/4 cup"},
+          {"name": "Lemon Juice", "quantity": "3 tbsp"},
+          {"name": "Garlic", "quantity": "2 cloves"},
+          {"name": "Olive Oil", "quantity": "2 tbsp"}
+        ],
+        "steps": [
+          "Pierce eggplants and roast at 400°F (200°C) until collapsed",
+          "Scoop out flesh, drain excess liquid",
+          "Blend with remaining ingredients",
+          "Season with salt to taste",
+          "Drizzle with olive oil to serve"
+        ],
+        "tips": [
+          "Char eggplant over flame for extra smokiness",
+          "Let cool to room temperature before serving"
+        ],
+        "nutrition": {
+          "calories": "120 kcal",
+          "protein": "3g",
+          "carbs": "10g",
+          "fat": "8g"
+        }
+      },
+      {
+        "id": 65,
+        "name": "Tabbouleh",
+        "description": "Fresh Lebanese parsley salad with bulgur wheat, tomatoes, and mint, dressed with lemon and olive oil.",
+        "image": "/Images/tabbouleh.jpg",
+        "time": "30 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Bulgur Wheat", "quantity": "1/2 cup"},
+          {"name": "Parsley", "quantity": "2 cups, finely chopped"},
+          {"name": "Mint", "quantity": "1/2 cup, finely chopped"},
+          {"name": "Tomatoes", "quantity": "2, diced"},
+          {"name": "Lemon Juice", "quantity": "1/4 cup"}
+        ],
+        "steps": [
+          "Soak bulgur in hot water for 20 minutes, drain",
+          "Combine with chopped herbs and vegetables",
+          "Whisk together lemon juice and olive oil",
+          "Toss with salad ingredients",
+          "Season with salt and pepper"
+        ],
+        "tips": [
+          "Use flat-leaf parsley for best texture",
+          "Let flavors meld for 30 minutes before serving"
+        ],
+        "nutrition": {
+          "calories": "180 kcal",
+          "protein": "4g",
+          "carbs": "20g",
+          "fat": "10g"
+        }
+      },
+      {
+        "id": 66,
+        "name": "Stuffed Grape Leaves (Dolmas)",
+        "description": "Tender grape leaves stuffed with herbed rice mixture, served as appetizer or main dish.",
+        "image": "/Images/dolmas.jpg",
+        "time": "1 hour 30 minutes",
+        "difficulty": "Medium",
+        "quantity": "Makes 30 dolmas",
+        "ingredients": [
+          {"name": "Grape Leaves", "quantity": "30, jarred or fresh"},
+          {"name": "Rice", "quantity": "1 cup"},
+          {"name": "Onion", "quantity": "1, finely chopped"},
+          {"name": "Dill", "quantity": "1/4 cup, chopped"},
+          {"name": "Lemon", "quantity": "1, sliced"}
+        ],
+        "steps": [
+          "Blanch fresh grape leaves if using",
+          "Sauté onion, then mix with rice and herbs",
+          "Place small amount of filling on each leaf",
+          "Roll tightly, tucking in sides",
+          "Arrange in pot, cover with water and lemon slices",
+          "Simmer for 45 minutes"
+        ],
+        "tips": [
+          "Use short-grain rice for best texture",
+          "Weight dolmas with plate while cooking"
+        ],
+        "nutrition": {
+          "calories": "50 kcal per dolma",
+          "protein": "1g",
+          "carbs": "8g",
+          "fat": "1g"
+        }
+      },
+      {
+        "id": 67,
+        "name": "Shakshuka",
+        "description": "North African dish of eggs poached in spicy tomato and pepper sauce, perfect for brunch.",
+        "image": "/Images/shakshuka.jpg",
+        "time": "40 minutes",
+        "difficulty": "Easy",
+        "quantity": "Serves 4",
+        "ingredients": [
+          {"name": "Tomatoes", "quantity": "4 cups, chopped"},
+          {"name": "Bell Peppers", "quantity": "2, chopped"},
+          {"name": "Onion", "quantity": "1, chopped"},
+          {"name": "Eggs", "quantity": "4"},
+          {"name": "Paprika", "quantity": "1 tsp"}
+        ],
+        "steps": [
+          "Sauté onions and peppers until soft",
+          "Add tomatoes and spices, simmer for 15 minutes",
+          "Make wells in sauce, crack eggs into them",
+          "Cover and cook until eggs are set",
+          "Garnish with parsley and feta"
+        ],
+        "tips": [
+          "Use canned tomatoes for convenience",
+          "Bake in oven for more even cooking"
+        ],
+        "nutrition": {
+          "calories": "220 kcal",
+          "protein": "10g",
+          "carbs": "15g",
+          "fat": "12g"
+        }
+      },
+      {
+        "id": 68,
+        "name": "Moussaka",
+        "description": "Greek layered eggplant dish with spiced lentils (vegetarian version) and creamy béchamel sauce.",
+        "image": "/Images/moussaka.jpg",
+        "time": "1 hour 30 minutes",
+        "difficulty": "Hard",
+        "quantity": "Serves 6",
+        "ingredients": [
+          {"name": "Eggplant", "quantity": "2 large, sliced"},
+          {"name": "Lentils", "quantity": "1 cup cooked"},
+          {"name": "Tomatoes", "quantity": "2 cups, chopped"},
+          {"name": "Béchamel Sauce", "quantity": "2 cups"},
+          {"name": "Cinnamon", "quantity": "1/2 tsp"}
+        ],
+        "steps": [
+          "Salt eggplant slices and let sit, then pat dry",
+          "Roast eggplant until tender",
+          "Prepare lentil-tomato sauce with spices",
+          "Layer eggplant and sauce in baking dish",
+          "Top with béchamel and bake until golden"
+        ],
+        "tips": [
+          "Press eggplant to remove excess moisture",
+          "Let rest 15 minutes before serving"
+        ],
+        "nutrition": {
+          "calories": "320 kcal",
+          "protein": "12g",
+          "carbs": "30g",
+          "fat": "18g"
+        }
+      },
+      {
+        "id": 69,
+        "name": "Pita Bread",
+        "description": "Soft and pillowy Middle Eastern flatbread with pocket, perfect for dipping or stuffing.",
+        "image": "/Images/pita.jpg",
+        "time": "2 hours (includes rising)",
+        "difficulty": "Medium",
+        "quantity": "Makes 8 pitas",
+        "ingredients": [
+          {"name": "Flour", "quantity": "3 cups"},
+          {"name": "Yeast", "quantity": "2 tsp"},
+          {"name": "Sugar", "quantity": "1 tsp"},
+          {"name": "Water", "quantity": "1 1/4 cups, warm"},
+          {"name": "Olive Oil", "quantity": "2 tbsp"}
+        ],
+        "steps": [
+          "Proof yeast with sugar and warm water",
+          "Mix flour and salt, add yeast mixture and oil",
+          "Knead until smooth and elastic",
+          "Let rise until doubled",
+          "Divide and roll into thin circles",
+          "Bake at 475°F (245°C) until puffed"
+        ],
+        "tips": [
+          "Use bread flour for better pocket formation",
+          "Bake on preheated baking stone or steel"
+        ],
+        "nutrition": {
+          "calories": "180 kcal",
+          "protein": "5g",
+          "carbs": "35g",
+          "fat": "2g"
+        }
+      },
+      {
+        "id": 70,
+        "name": "Turkish Delight",
+        "description": "Classic Middle Eastern confection with chewy texture and floral flavors, dusted with powdered sugar.",
+        "image": "/Images/turkishdelight.jpg",
+        "time": "1 hour + setting",
+        "difficulty": "Hard",
+        "quantity": "Makes 36 pieces",
+        "ingredients": [
+          {"name": "Sugar", "quantity": "4 cups"},
+          {"name": "Cornstarch", "quantity": "1 cup"},
+          {"name": "Lemon Juice", "quantity": "1 tbsp"},
+          {"name": "Rose Water", "quantity": "2 tbsp"},
+          {"name": "Food Coloring", "quantity": "few drops (optional)"}
+        ],
+        "steps": [
+          "Dissolve sugar in water, boil to soft ball stage",
+          "Mix cornstarch with water, cook until thick",
+          "Combine sugar syrup with cornstarch mixture",
+          "Cook for about 1 hour, stirring constantly",
+          "Add flavoring and coloring",
+          "Pour into oiled pan, let set overnight",
+          "Cut and dust with powdered sugar"
+        ],
+        "tips": [
+          "Use candy thermometer for precision",
+          "Line pan with parchment for easy removal"
+        ],
+        "nutrition": {
+          "calories": "80 kcal per piece",
+          "protein": "0g",
+          "carbs": "20g",
+          "fat": "0g"
+        }
       }
     ]
   }

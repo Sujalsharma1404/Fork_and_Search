@@ -59,9 +59,11 @@ function CategoryPage() {
                       <Card.Title className="dish-name">
                         {dish?.name || 'Untitled Dish'}
                       </Card.Title>
+                      <p>{dish?.description}</p>
                       <div className="dish-meta">
                         <span>⏱ {dish?.time || 'N/A'}</span>
                         <span>⚡ {dish?.difficulty || 'N/A'}</span>
+                        
                       </div>
                     </Card.Body>
                   </Card>

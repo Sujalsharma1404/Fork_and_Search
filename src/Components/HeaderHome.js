@@ -18,15 +18,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./HeaderHome.css";
 
 import LoginModal from "./Modals/LoginModal";
-import MobileSearchModal from "./Modals/MobileSearchModal";
+import SearchModal from "./Modals/SearchResultsModal";
 import { useNavigate } from "react-router-dom";
+
+import recipeData from "./Data/CategoryData.json";
 
 function HeaderHome() {
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showMenu, setShowMenu] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-  const [showMobileSearch, setShowMobileSearch] = useState(false);
+  const [showSearchModal, setShowSearchModal] = useState(false);
 
   const toggleSearch = () => setShowSearch(!showSearch);
   const closeSearch = () => {
@@ -36,11 +38,20 @@ function HeaderHome() {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    console.log("Searching for:", searchQuery);
-    closeSearch();
+    if (searchQuery.trim() !== "") {
+      setShowSearchModal(true);
+    }
   };
 
-  const navigate = useNavigate(); // React Router hook to navigate pages
+  const navigate = useNavigate();
+
+  // ✅ FLATTEN the data correctly
+  const allRecipes = recipeData.flatMap(category => category.dishes);
+
+  // ✅ Safe filter with optional chaining and fallback
+  const filteredRecipes = allRecipes.filter(recipe =>
+    recipe?.name?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="topbar-wrapper">
@@ -48,14 +59,12 @@ function HeaderHome() {
       <Container fluid className="topbar">
         <Container className="py-2 element-bar">
           <Row className="align-items-center justify-content-between">
-            {/* Social Icons */}
             <Col xs={6} md="auto" className="d-flex align-items-center">
               <FaTwitter className="icon" />
               <FaInstagram className="icon" />
               <FaFacebookF className="icon" />
             </Col>
 
-            {/* Search + Login (Desktop only) */}
             <Col
               xs={6}
               md="auto"
@@ -76,12 +85,19 @@ function HeaderHome() {
                   <InputGroup>
                     <Form.Control
                       type="text"
-                      placeholder="Search..."
+                      placeholder="Search recipes..."
                       className="search-input"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       autoFocus
                     />
+                    <Button
+                      variant="outline-secondary"
+                      type="submit"
+                      className="btn-close-search"
+                    >
+                      <FaSearch />
+                    </Button>
                     <Button
                       variant="outline-secondary"
                       onClick={closeSearch}
@@ -93,7 +109,6 @@ function HeaderHome() {
                 </Form>
               )}
 
-              {/* Login Button */}
               <Button
                 className="btn btn-outline-dark btn-header d-none d-md-inline"
                 onClick={() => setShowLogin(true)}
@@ -108,12 +123,11 @@ function HeaderHome() {
       {/* === Logo Row === */}
       <div className="logo-row py-3">
         <Container>
-          {/* Mobile: Search | Logo | Hamburger */}
           <Row className="align-items-center justify-content-between d-flex d-md-none">
             <Col xs="auto">
               <FaSearch
                 className="icon-action"
-                onClick={() => setShowMobileSearch(true)}
+                onClick={() => setShowSearchModal(true)}
               />
             </Col>
             <Col className="text-center">
@@ -126,7 +140,6 @@ function HeaderHome() {
             </Col>
           </Row>
 
-          {/* Desktop: Centered logo */}
           <Row className="d-none d-md-flex justify-content-center">
             <Col md="auto">
               <img src={logo} alt="Fork & Search" className="header-logo" />
@@ -135,11 +148,12 @@ function HeaderHome() {
         </Container>
       </div>
 
-      {/* === Offcanvas Hamburger Menu === */}
+      {/* === Offcanvas === */}
       <Offcanvas
         show={showMenu}
         onHide={() => setShowMenu(false)}
         placement="end"
+        backdrop
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
@@ -150,7 +164,7 @@ function HeaderHome() {
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/recipes"); }}>Recipes</Nav.Link>
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/contact"); }}>Contact</Nav.Link>
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/about"); }}>About</Nav.Link>
-            <Nav.Link onClick={() => setShowLogin(true)}>Login</Nav.Link>
+            <Nav.Link onClick={() => { setShowLogin(true); setShowMenu(false); }}>Login</Nav.Link>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
@@ -177,7 +191,6 @@ function HeaderHome() {
                 <Tab eventKey="contact" title="Contact" />
                 <Tab eventKey="about" title="About Us" />
               </Tabs>
-
             </Col>
           </Row>
         </Container>
@@ -185,11 +198,10 @@ function HeaderHome() {
 
       {/* === Modals === */}
       <LoginModal show={showLogin} handleClose={() => setShowLogin(false)} />
-      <MobileSearchModal
-        show={showMobileSearch}
-        handleClose={() => setShowMobileSearch(false)}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
+      <SearchModal
+        show={showSearchModal}
+        handleClose={() => setShowSearchModal(false)}
+        results={filteredRecipes}
       />
     </div>
   );

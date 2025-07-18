@@ -2,18 +2,24 @@ import React, { useState } from "react";
 import { Container, Button } from "react-bootstrap";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../Assets/logo1.png";
-import "./Header.css";
 import { IoClose } from "react-icons/io5";
 
-// ✅ Import LoginModal — path may vary
+import logo from "../Assets/logo1.png";
+import "./Header.css";
+
 import LoginModal from "../Components/Modals/LoginModal";
+import SearchResultsModal from "../Components/Modals/SearchResultsModal"; // ✅ if you built this!
+import categoryData from "../Components/Data/CategoryData.json";
+import { searchRecipes } from "../Search";
 
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showLogin, setShowLogin] = useState(false);
+
+  const [showResults, setShowResults] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
 
   const toggleSearch = () => setShowSearch(!showSearch);
   const closeSearch = () => {
@@ -23,8 +29,11 @@ function Header() {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    console.log("Searching for:", searchQuery);
+    const results = searchRecipes(searchQuery, categoryData);
+    setSearchResults(results);
+    setShowResults(true);
     closeSearch();
+    setShowMobileMenu(false); // ✅ Close mobile menu if open
   };
 
   return (
@@ -53,7 +62,7 @@ function Header() {
             </button>
 
             {showSearch && (
-              <div className="search-wrapper">
+              <form onSubmit={handleSearchSubmit} className="search-wrapper">
                 <input
                   type="text"
                   className="search-input"
@@ -62,10 +71,10 @@ function Header() {
                   placeholder="Search..."
                   autoFocus
                 />
-                <button className="close-search-btn" onClick={closeSearch}>
+                <button className="close-search-btn" onClick={closeSearch} type="button">
                   <IoClose size={18} />
                 </button>
-              </div>
+              </form>
             )}
 
             <Button
@@ -99,17 +108,16 @@ function Header() {
                 <FaTimes size={24} />
               </button>
             </div>
+
             <nav className="mobile-nav">
               <Link to="/" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>Home</Link>
               <Link to="/recipes" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>Recipes</Link>
               <Link to="/about" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>About Us</Link>
               <Link to="/contact" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>Contact</Link>
-              <Link className="mobile-nav-link" onClick={toggleSearch}>
-                <FaSearch size={18} /> Search
-              </Link>
 
-              {showSearch && (
-                <div className="search-wrapper">
+              {/* === Inline search in mobile === */}
+              {showSearch ? (
+                <form onSubmit={handleSearchSubmit} className="search-wrapper mobile-search-wrapper">
                   <input
                     type="text"
                     className="search-input"
@@ -118,10 +126,14 @@ function Header() {
                     placeholder="Search..."
                     autoFocus
                   />
-                  <button className="close-search-btn" onClick={closeSearch}>
+                  <button className="close-search-btn" onClick={closeSearch} type="button">
                     <IoClose size={18} />
                   </button>
-                </div>
+                </form>
+              ) : (
+                <button className="mobile-nav-link" onClick={toggleSearch}>
+                  <FaSearch size={18} /> Search
+                </button>
               )}
 
               <Button
@@ -140,6 +152,13 @@ function Header() {
 
       {/* === Login Modal === */}
       <LoginModal show={showLogin} handleClose={() => setShowLogin(false)} />
+
+      {/* === Search Results Modal === */}
+      <SearchResultsModal
+        show={showResults}
+        handleClose={() => setShowResults(false)}
+        results={searchResults}
+      />
     </header>
   );
 }

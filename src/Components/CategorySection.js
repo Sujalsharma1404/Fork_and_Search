@@ -6,9 +6,10 @@ import "./CategorySection.css";
 function PopularCategories({ categories }) {
   return (
     <Container className="popular-categories">
-      <h1 className="section-title">Popular Categories</h1>
+      <h1 className="section-title text-center mb-4">Popular Categories</h1>
       <Row className="justify-content-center">
-        {categories.map((category) => (
+        {/* ✅ Limit to first 6 categories only */}
+        {categories.slice(0, 6).map((category) => (
           <Col xs={4} sm={3} md={2} key={category.category} className="mb-4">
             <Link
               to={`/category/${category.category.toLowerCase()}`}
