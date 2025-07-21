@@ -1,73 +1,63 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
-import categoryData from '../Components/Data/CategoryData.json';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase";
+import { Container, Row, Col, Card, ListGroup, Spinner } from 'react-bootstrap';
 import "../Components/Style/DishDetail.css";
 import Header from "../Components/Header";
 
-
 function DishDetail() {
   const { dishId } = useParams();
-  const [dish, setDish] = React.useState(null);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const [dish, setDish] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  React.useEffect(() => {
-    // Safely find dish with proper error handling
-    try {
-      let foundDish = null;
-      const parsedId = parseInt(dishId);
+  useEffect(() => {
+    const fetchDish = async () => {
+      try {
+        const docRef = doc(db, "recipes", dishId);
+        const docSnap = await getDoc(docRef);
 
-      if (Array.isArray(categoryData)) {
-        for (const category of categoryData) {
-          if (Array.isArray(category?.dishes)) {
-            const dishMatch = category.dishes.find(d => d?.id === parsedId);
-            if (dishMatch) {
-              foundDish = {
-                ...dishMatch,
-                category: category?.name || 'Unknown Category'
-              };
-              break;
-            }
-          }
+        if (docSnap.exists()) {
+          setDish(docSnap.data());
+        } else {
+          setDish(null);
         }
+      } catch (error) {
+        console.error("Error fetching dish:", error);
+      } finally {
+        setLoading(false);
       }
-      setDish(foundDish);
-    } catch (error) {
-      console.error("Error loading dish:", error);
-    } finally {
-      setIsLoading(false);
-    }
+    };
+
+    fetchDish();
   }, [dishId]);
 
-  if (isLoading) {
+  if (loading) {
     return (
-      <Container className="loading-state">
-        <div className="spinner-border text-primary" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+      <Container className="loading-state text-center py-5">
+        <Spinner animation="border" role="status" />
+        <p>Loading dish...</p>
       </Container>
     );
   }
 
   if (!dish) {
     return (
-      <Container className="not-found">
+      <Container className="not-found text-center py-5">
         <h2>Dish not found</h2>
-        <Link to="/" className="btn btn-primary">
+        <Link to="/" className="btn btn-primary mt-3">
           Back to Home
         </Link>
       </Container>
     );
   }
 
-  // Helper function to render list items safely
   const renderListItems = (items, isOrdered = false) => {
     if (!Array.isArray(items) || items.length === 0) return null;
-
     const ListComponent = isOrdered ? 'ol' : 'ul';
 
     return (
-      <ListComponent className={isOrdered ? 'steps-list' : 'tips-list'}>
+      <ListComponent>
         {items.map((item, index) => (
           <li key={index}>{item || 'No information available'}</li>
         ))}
@@ -77,13 +67,9 @@ function DishDetail() {
 
   return (
     <>
-      <div>
-        <Header />
-      </div>
+      <Header />
 
       <Container className="dish-detail">
-
-
         <Row>
           <Col lg={6} className="mb-4">
             <Card className="dish-image-card">
@@ -102,49 +88,37 @@ function DishDetail() {
           <Col lg={6}>
             <Card className="dish-info-card">
               <Card.Body>
-                <Card.Title className="dish-title">
-                  {dish.name || 'Untitled Dish'}
-                </Card.Title>
+                <Card.Title>{dish.name || 'Untitled Dish'}</Card.Title>
 
                 <div className="dish-meta mb-3">
-                  <span className="time">⏱ {dish.time || 'Not specified'}</span>
-                  <span className="difficulty">⚡ {dish.difficulty || 'Not specified'}</span>
+                  <span>⏱ {dish.time || 'Not specified'}</span>
+                  <span>⚡ {dish.difficulty || 'Not specified'}</span>
                   {dish.quantity && (
-                    <span className="serves">🍽 {dish.quantity}</span>
+                    <span>🍽 {dish.quantity}</span>
                   )}
                 </div>
 
                 {dish.ingredients?.length > 0 && (
                   <>
-                    <Card.Subtitle className="mb-2 section-title">
-                      Ingredients
-                    </Card.Subtitle>
+                    <h5>Ingredients</h5>
                     <ListGroup variant="flush" className="mb-3">
-                      {dish.ingredients.map((ingredient, index) => (
-                        <ListGroup.Item key={`ing-${index}`}>
-                          {ingredient.name || 'Unnamed ingredient'}:{' '}
-                          <strong>{ingredient.quantity || 'As needed'}</strong>
-                        </ListGroup.Item>
+                      {dish.ingredients.map((ing, index) => (
+                        <ListGroup.Item key={index}>{ing}</ListGroup.Item>
                       ))}
                     </ListGroup>
-
                   </>
                 )}
 
                 {dish.steps?.length > 0 && (
                   <>
-                    <Card.Subtitle className="mb-2 section-title">
-                      Instructions
-                    </Card.Subtitle>
+                    <h5>Instructions</h5>
                     {renderListItems(dish.steps, true)}
                   </>
                 )}
 
                 {dish.tips?.length > 0 && (
                   <>
-                    <Card.Subtitle className="mb-2 section-title">
-                      Chef's Tips
-                    </Card.Subtitle>
+                    <h5>Chef's Tips</h5>
                     {renderListItems(dish.tips)}
                   </>
                 )}

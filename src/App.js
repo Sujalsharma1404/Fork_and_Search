@@ -18,7 +18,6 @@ function App() {
         <Route path="/contact" element={< Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/recipes" element={<RecipesPage />} />
-
         <Route path="/category/:categoryName" element={<CategoryPage />} />
         <Route path="/dish/:dishId" element={<DishDetail />} />
       </Routes>
