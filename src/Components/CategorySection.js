@@ -32,7 +32,7 @@ function PopularCategories() {
         {categories.slice(0, 6).map((category) => (
           <Col xs={4} sm={3} md={2} key={category.id} className="mb-4">
             <Link
-              to={`/category/${category.category.toLowerCase()}`}
+              to={`/category/${category.category}`}
               className="category-link"
             >
               <div

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { doc, getDoc } from "firebase/firestore";
+import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import { Container, Row, Col, Card, ListGroup, Spinner } from 'react-bootstrap';
 import "../Components/Style/DishDetail.css";
@@ -14,16 +14,21 @@ function DishDetail() {
   useEffect(() => {
     const fetchDish = async () => {
       try {
-        const docRef = doc(db, "recipes", dishId);
-        const docSnap = await getDoc(docRef);
+        const q = query(
+          collection(db, "recipes"),
+          where("id", "==", Number(dishId))
+        );
+        const querySnapshot = await getDocs(q);
 
-        if (docSnap.exists()) {
-          setDish(docSnap.data());
+        if (!querySnapshot.empty) {
+          // Get first matched document
+          setDish(querySnapshot.docs[0].data());
         } else {
           setDish(null);
         }
       } catch (error) {
         console.error("Error fetching dish:", error);
+        setDish(null);
       } finally {
         setLoading(false);
       }
@@ -103,11 +108,14 @@ function DishDetail() {
                     <h5>Ingredients</h5>
                     <ListGroup variant="flush" className="mb-3">
                       {dish.ingredients.map((ing, index) => (
-                        <ListGroup.Item key={index}>{ing}</ListGroup.Item>
+                        <ListGroup.Item key={index}>
+                          {ing.name} — {ing.quantity}
+                        </ListGroup.Item>
                       ))}
                     </ListGroup>
                   </>
                 )}
+
 
                 {dish.steps?.length > 0 && (
                   <>
