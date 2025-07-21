@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Button } from "react-bootstrap";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -8,18 +8,28 @@ import logo from "../Assets/logo1.png";
 import "./Header.css";
 
 import LoginModal from "../Components/Modals/LoginModal";
-import SearchResultsModal from "../Components/Modals/SearchResultsModal"; // ✅ if you built this!
+import SearchResultsModal from "../Components/Modals/SearchResultsModal";
 import categoryData from "../Components/Data/CategoryData.json";
 import { searchRecipes } from "../Search";
+
+import { auth } from "../firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showLogin, setShowLogin] = useState(false);
-
   const [showResults, setShowResults] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
 
   const toggleSearch = () => setShowSearch(!showSearch);
   const closeSearch = () => {
@@ -33,21 +43,25 @@ function Header() {
     setSearchResults(results);
     setShowResults(true);
     closeSearch();
-    setShowMobileMenu(false); // ✅ Close mobile menu if open
+    setShowMobileMenu(false);
+  };
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => alert("Logged out successfully!"))
+      .catch((err) => alert("Logout failed: " + err.message));
   };
 
   return (
     <header className="common-header">
       <Container>
         <div className="header-content">
-          {/* === Logo === */}
           <div className="logo-container">
             <Link to="/">
               <img src={logo} alt="Fork & Search" className="header-logo" />
             </Link>
           </div>
 
-          {/* === Desktop Nav === */}
           <nav className="main-nav">
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/recipes" className="nav-link">Recipes</Link>
@@ -55,7 +69,6 @@ function Header() {
             <Link to="/contact" className="nav-link">Contact</Link>
           </nav>
 
-          {/* === Actions === */}
           <div className="header-actions">
             <button className="search-btn" onClick={toggleSearch}>
               <FaSearch size={18} />
@@ -77,34 +90,28 @@ function Header() {
               </form>
             )}
 
-            <Button
-              variant="primary"
-              className="login-btn"
-              onClick={() => setShowLogin(true)}
-            >
-              Login
-            </Button>
+            {user ? (
+              <Button variant="danger" className="login-btn" onClick={handleLogout}>
+                Logout
+              </Button>
+            ) : (
+              <Button variant="primary" className="login-btn" onClick={() => setShowLogin(true)}>
+                Login
+              </Button>
+            )}
           </div>
 
-          {/* === Mobile Toggle === */}
-          <button
-            className="menu-toggle"
-            onClick={() => setShowMobileMenu(true)}
-          >
+          <button className="menu-toggle" onClick={() => setShowMobileMenu(true)}>
             <FaBars size={24} />
           </button>
         </div>
       </Container>
 
-      {/* === Mobile Menu === */}
       {showMobileMenu && (
         <div className="mobile-menu-overlay">
           <div className="mobile-menu">
             <div className="menu-header">
-              <button
-                className="close-btn"
-                onClick={() => setShowMobileMenu(false)}
-              >
+              <button className="close-btn" onClick={() => setShowMobileMenu(false)}>
                 <FaTimes size={24} />
               </button>
             </div>
@@ -115,7 +122,6 @@ function Header() {
               <Link to="/about" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>About Us</Link>
               <Link to="/contact" className="mobile-nav-link" onClick={() => setShowMobileMenu(false)}>Contact</Link>
 
-              {/* === Inline search in mobile === */}
               {showSearch ? (
                 <form onSubmit={handleSearchSubmit} className="search-wrapper mobile-search-wrapper">
                   <input
@@ -136,29 +142,22 @@ function Header() {
                 </button>
               )}
 
-              <Button
-                className="btn btn-outline-dark btn-header"
-                onClick={() => {
-                  setShowLogin(true);
-                  setShowMobileMenu(false);
-                }}
-              >
-                Login
-              </Button>
+              {user ? (
+                <Button className="btn btn-outline-danger btn-header" onClick={() => { handleLogout(); setShowMobileMenu(false); }}>
+                  Logout
+                </Button>
+              ) : (
+                <Button className="btn btn-outline-dark btn-header" onClick={() => { setShowLogin(true); setShowMobileMenu(false); }}>
+                  Login
+                </Button>
+              )}
             </nav>
           </div>
         </div>
       )}
 
-      {/* === Login Modal === */}
       <LoginModal show={showLogin} handleClose={() => setShowLogin(false)} />
-
-      {/* === Search Results Modal === */}
-      <SearchResultsModal
-        show={showResults}
-        handleClose={() => setShowResults(false)}
-        results={searchResults}
-      />
+      <SearchResultsModal show={showResults} handleClose={() => setShowResults(false)} results={searchResults} />
     </header>
   );
 }

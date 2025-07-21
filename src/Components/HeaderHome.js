@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -20,6 +20,8 @@ import "./HeaderHome.css";
 import LoginModal from "./Modals/LoginModal";
 import SearchModal from "./Modals/SearchResultsModal";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
 import recipeData from "./Data/CategoryData.json";
 
@@ -29,6 +31,16 @@ function HeaderHome() {
   const [showMenu, setShowMenu] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [showSearchModal, setShowSearchModal] = useState(false);
+  const [user, setUser] = useState(null);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
 
   const toggleSearch = () => setShowSearch(!showSearch);
   const closeSearch = () => {
@@ -43,19 +55,20 @@ function HeaderHome() {
     }
   };
 
-  const navigate = useNavigate();
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => alert("Logged out successfully!"))
+      .catch((err) => alert("Logout failed: " + err.message));
+  };
 
-  // ✅ FLATTEN the data correctly
-  const allRecipes = recipeData.flatMap(category => category.dishes);
+  const allRecipes = recipeData.flatMap((category) => category.dishes);
 
-  // ✅ Safe filter with optional chaining and fallback
-  const filteredRecipes = allRecipes.filter(recipe =>
+  const filteredRecipes = allRecipes.filter((recipe) =>
     recipe?.name?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div className="topbar-wrapper">
-      {/* === Top Bar === */}
       <Container fluid className="topbar">
         <Container className="py-2 element-bar">
           <Row className="align-items-center justify-content-between">
@@ -109,12 +122,21 @@ function HeaderHome() {
                 </Form>
               )}
 
-              <Button
-                className="btn btn-outline-dark btn-header d-none d-md-inline"
-                onClick={() => setShowLogin(true)}
-              >
-                Login
-              </Button>
+              {user ? (
+                <Button
+                  className="btn btn-outline-danger btn-header d-none d-md-inline"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
+              ) : (
+                <Button
+                  className="btn btn-outline-dark btn-header d-none d-md-inline"
+                  onClick={() => setShowLogin(true)}
+                >
+                  Login
+                </Button>
+              )}
             </Col>
           </Row>
         </Container>
@@ -149,12 +171,7 @@ function HeaderHome() {
       </div>
 
       {/* === Offcanvas === */}
-      <Offcanvas
-        show={showMenu}
-        onHide={() => setShowMenu(false)}
-        placement="end"
-        backdrop
-      >
+      <Offcanvas show={showMenu} onHide={() => setShowMenu(false)} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
@@ -164,12 +181,15 @@ function HeaderHome() {
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/recipes"); }}>Recipes</Nav.Link>
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/contact"); }}>Contact</Nav.Link>
             <Nav.Link onClick={() => { setShowMenu(false); navigate("/about"); }}>About</Nav.Link>
-            <Nav.Link onClick={() => { setShowLogin(true); setShowMenu(false); }}>Login</Nav.Link>
+            {user ? (
+              <Nav.Link onClick={() => { handleLogout(); setShowMenu(false); }}>Logout</Nav.Link>
+            ) : (
+              <Nav.Link onClick={() => { setShowLogin(true); setShowMenu(false); }}>Login</Nav.Link>
+            )}
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
 
-      {/* === Tabs (Desktop only) === */}
       <Container fluid>
         <Container>
           <Row className="d-none d-md-flex justify-content-center mt-3">
@@ -196,7 +216,6 @@ function HeaderHome() {
         </Container>
       </Container>
 
-      {/* === Modals === */}
       <LoginModal show={showLogin} handleClose={() => setShowLogin(false)} />
       <SearchModal
         show={showSearchModal}
