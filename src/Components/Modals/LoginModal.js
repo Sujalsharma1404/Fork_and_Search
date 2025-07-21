@@ -59,9 +59,20 @@ function LoginModal({ show, handleClose }) {
             <Button variant="primary" type="submit" className="w-100 rounded-1">
               Login
             </Button>
-          </Form>
 
+            <div className="text-center mt-3">
+              <span>Don’t have an account? </span>
+              <button
+                type="button"
+                className="link-button"
+                onClick={handleShowSignUp}
+              >
+                Sign Up
+              </button>
+            </div>
+          </Form>
         </Modal.Body>
+
       </Modal>
 
       <SignUpModal show={showSignUp} handleClose={() => setShowSignUp(false)} />

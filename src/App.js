@@ -7,7 +7,8 @@ import CategoryPage from './Pages/CategoryPage';
 import DishDetail from './Pages/DishDetail';
 import Footer from './Components/Footer';
 import ScrollToTop from "./ScrollToTop";
-
+import AdminRoute from "./AdminRoute";
+import AdminPage from "./Pages/AdminPage";
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
         <Route path="/recipes" element={<RecipesPage />} />
         <Route path="/category/:categoryName" element={<CategoryPage />} />
         <Route path="/dish/:dishId" element={<DishDetail />} />
+        <Route path="/admin" element={
+          <AdminRoute>
+            <AdminPage />
+          </AdminRoute>
+        } />
       </Routes>
       <Footer />
 

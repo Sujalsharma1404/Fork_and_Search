@@ -9,8 +9,8 @@ import "./Header.css";
 
 import LoginModal from "../Components/Modals/LoginModal";
 import SearchResultsModal from "../Components/Modals/SearchResultsModal";
-import categoryData from "../Components/Data/CategoryData.json";
-import { searchRecipes } from "../Search";
+
+import { searchRecipes } from "../Search"; // ✅ use updated Firebase search
 
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -37,9 +37,9 @@ function Header() {
     setShowSearch(false);
   };
 
-  const handleSearchSubmit = (e) => {
+  const handleSearchSubmit = async (e) => {
     e.preventDefault();
-    const results = searchRecipes(searchQuery, categoryData);
+    const results = await searchRecipes(searchQuery);
     setSearchResults(results);
     setShowResults(true);
     closeSearch();

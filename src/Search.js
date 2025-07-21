@@ -1,20 +1,33 @@
-// src/utils/search.js
-export function searchRecipes(query, categories) {
-  if (!query) return [];
-  const lower = query.toLowerCase();
+// ✅ src/utils/search.js
 
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "./firebase";
+
+/**
+ * Search recipes in Firestore by name
+ * @param {string} query - Search term
+ * @returns {Promise<Array>} - Matching recipes
+ */
+export async function searchRecipes(query) {
+  if (!query) return [];
+
+  const lower = query.toLowerCase();
   const results = [];
 
-  categories.forEach((cat) => {
-    cat.dishes.forEach((dish) => {
-      if (dish.name.toLowerCase().includes(lower)) {
+  try {
+    const snapshot = await getDocs(collection(db, "recipes"));
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      if (data.name && data.name.toLowerCase().includes(lower)) {
         results.push({
-          ...dish,
-          category: cat.category,
+          id: doc.id, // use Firestore ID for navigation
+          ...data,
         });
       }
     });
-  });
+  } catch (error) {
+    console.error("Error searching recipes:", error);
+  }
 
   return results;
 }

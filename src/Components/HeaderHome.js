@@ -23,7 +23,7 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
-import recipeData from "./Data/CategoryData.json";
+import { searchRecipes } from "../Search"; // ✅ use new Firebase search
 
 function HeaderHome() {
   const [showSearch, setShowSearch] = useState(false);
@@ -32,6 +32,7 @@ function HeaderHome() {
   const [showLogin, setShowLogin] = useState(false);
   const [showSearchModal, setShowSearchModal] = useState(false);
   const [user, setUser] = useState(null);
+  const [searchResults, setSearchResults] = useState([]); // ✅ store live search results
 
   const navigate = useNavigate();
 
@@ -48,9 +49,12 @@ function HeaderHome() {
     setShowSearch(false);
   };
 
-  const handleSearchSubmit = (e) => {
+  const handleSearchSubmit = async (e) => {
     e.preventDefault();
     if (searchQuery.trim() !== "") {
+      // ✅ Use Firebase search
+      const found = await searchRecipes(searchQuery);
+      setSearchResults(found);
       setShowSearchModal(true);
     }
   };
@@ -60,12 +64,6 @@ function HeaderHome() {
       .then(() => alert("Logged out successfully!"))
       .catch((err) => alert("Logout failed: " + err.message));
   };
-
-  const allRecipes = recipeData.flatMap((category) => category.dishes);
-
-  const filteredRecipes = allRecipes.filter((recipe) =>
-    recipe?.name?.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   return (
     <div className="topbar-wrapper">
@@ -149,7 +147,7 @@ function HeaderHome() {
             <Col xs="auto">
               <FaSearch
                 className="icon-action"
-                onClick={() => setShowSearchModal(true)}
+                onClick={toggleSearch} // ✅ open search in mobile
               />
             </Col>
             <Col className="text-center">
@@ -220,7 +218,7 @@ function HeaderHome() {
       <SearchModal
         show={showSearchModal}
         handleClose={() => setShowSearchModal(false)}
-        results={filteredRecipes}
+        results={searchResults} // ✅ now uses live results
       />
     </div>
   );
