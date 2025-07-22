@@ -3,10 +3,16 @@ import { Modal, Form, Button } from "react-bootstrap";
 import { IoClose } from "react-icons/io5";
 import "../Modals/Modal.css";
 
-function MobileSearchModal({ show, handleClose, searchQuery, setSearchQuery }) {
+function MobileSearchModal({
+  show,
+  handleClose,
+  searchQuery,
+  setSearchQuery,
+  runSearch,
+}) {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    console.log("Search:", searchQuery);
+    runSearch();
     handleClose();
   };
 
@@ -27,7 +33,11 @@ function MobileSearchModal({ show, handleClose, searchQuery, setSearchQuery }) {
             onChange={(e) => setSearchQuery(e.target.value)}
             autoFocus
           />
-          <Button variant="light" onClick={handleClose} className="mobile-search-close">
+          <Button
+            variant="light"
+            onClick={handleClose}
+            className="mobile-search-close"
+          >
             <IoClose size={24} />
           </Button>
         </Form>

@@ -10,8 +10,7 @@ import "./Header.css";
 import LoginModal from "../Components/Modals/LoginModal";
 import SearchResultsModal from "../Components/Modals/SearchResultsModal";
 
-import { searchRecipes } from "../Search"; // ✅ use updated Firebase search
-
+import { searchRecipes } from "../Search";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
@@ -39,6 +38,7 @@ function Header() {
 
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
+    if (searchQuery.trim() === "") return;
     const results = await searchRecipes(searchQuery);
     setSearchResults(results);
     setShowResults(true);
@@ -124,23 +124,26 @@ function Header() {
 
               {showSearch ? (
                 <form onSubmit={handleSearchSubmit} className="search-wrapper mobile-search-wrapper">
-                  <Link
-                    type="text"
-                    className="search-input"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    // placeholder="Search..."
-                    autoFocus
-                  />
-                  <button className="close-search-btn" onClick={closeSearch} type="button">
-                    <IoClose size={18} />
-                  </button>
+                  <div className="mobile-nav-link mobile-search-input-wrapper">
+                    <input
+                      type="text"
+                      className="search-input"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Search..."
+                      autoFocus
+                    />
+                    <button className="close-search-btn" onClick={closeSearch} type="button">
+                      <IoClose size={18} />
+                    </button>
+                  </div>
                 </form>
               ) : (
                 <button className="mobile-nav-link" onClick={toggleSearch}>
                   <FaSearch size={18} /> Search
                 </button>
               )}
+
 
               {user ? (
                 <Button className="btn btn-outline-danger btn-header" onClick={() => { handleLogout(); setShowMobileMenu(false); }}>

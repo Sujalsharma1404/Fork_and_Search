@@ -19,20 +19,22 @@ import "./HeaderHome.css";
 
 import LoginModal from "./Modals/LoginModal";
 import SearchModal from "./Modals/SearchResultsModal";
+import MobileSearchModal from "./Modals/MobileSearchModal";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
-import { searchRecipes } from "../Search"; // ✅ use new Firebase search
+import { searchRecipes } from "../Search"; // ✅ Firebase search
 
 function HeaderHome() {
   const [showSearch, setShowSearch] = useState(false);
+  const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showMenu, setShowMenu] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [showSearchModal, setShowSearchModal] = useState(false);
   const [user, setUser] = useState(null);
-  const [searchResults, setSearchResults] = useState([]); // ✅ store live search results
+  const [searchResults, setSearchResults] = useState([]);
 
   const navigate = useNavigate();
 
@@ -43,7 +45,14 @@ function HeaderHome() {
     return () => unsubscribe();
   }, []);
 
-  const toggleSearch = () => setShowSearch(!showSearch);
+  const toggleSearch = () => {
+    if (window.innerWidth < 768) {
+      setShowMobileSearch(true);
+    } else {
+      setShowSearch(!showSearch);
+    }
+  };
+
   const closeSearch = () => {
     setSearchQuery("");
     setShowSearch(false);
@@ -51,8 +60,11 @@ function HeaderHome() {
 
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
+    runSearch();
+  };
+
+  const runSearch = async () => {
     if (searchQuery.trim() !== "") {
-      // ✅ Use Firebase search
       const found = await searchRecipes(searchQuery);
       setSearchResults(found);
       setShowSearchModal(true);
@@ -67,32 +79,21 @@ function HeaderHome() {
 
   return (
     <div className="topbar-wrapper">
-      <Container fluid className="topbar">
+      {/* === Desktop Topbar === */}
+      <Container fluid className="topbar d-none d-md-block">
         <Container className="py-2 element-bar">
           <Row className="align-items-center justify-content-between">
-            <Col xs={6} md="auto" className="d-flex align-items-center">
+            <Col className="d-flex align-items-center gap-2">
               <FaTwitter className="icon" />
               <FaInstagram className="icon" />
               <FaFacebookF className="icon" />
             </Col>
-
-            <Col
-              xs={6}
-              md="auto"
-              className="d-flex align-items-center justify-content-end gap-2"
-            >
-              <Button
-                className="btn btn-icon d-none d-md-inline"
-                onClick={toggleSearch}
-              >
+            <Col className="d-flex align-items-center justify-content-end gap-2">
+              <Button className="btn btn-icon" onClick={toggleSearch}>
                 <FaSearch className="icon" />
               </Button>
-
               {showSearch && (
-                <Form
-                  className="mx-2 d-none d-md-inline-block"
-                  onSubmit={handleSearchSubmit}
-                >
+                <Form className="mx-2" onSubmit={handleSearchSubmit}>
                   <InputGroup>
                     <Form.Control
                       type="text"
@@ -119,17 +120,16 @@ function HeaderHome() {
                   </InputGroup>
                 </Form>
               )}
-
               {user ? (
                 <Button
-                  className="btn btn-outline-danger btn-header d-none d-md-inline"
+                  className="btn btn-outline-danger btn-header"
                   onClick={handleLogout}
                 >
                   Logout
                 </Button>
               ) : (
                 <Button
-                  className="btn btn-outline-dark btn-header d-none d-md-inline"
+                  className="btn btn-outline-dark btn-header"
                   onClick={() => setShowLogin(true)}
                 >
                   Login
@@ -143,11 +143,12 @@ function HeaderHome() {
       {/* === Logo Row === */}
       <div className="logo-row py-3">
         <Container>
+          {/* Mobile */}
           <Row className="align-items-center justify-content-between d-flex d-md-none">
             <Col xs="auto">
               <FaSearch
                 className="icon-action"
-                onClick={toggleSearch} // ✅ open search in mobile
+                onClick={toggleSearch} // ✅ opens MobileSearchModal
               />
             </Col>
             <Col className="text-center">
@@ -160,6 +161,7 @@ function HeaderHome() {
             </Col>
           </Row>
 
+          {/* Desktop */}
           <Row className="d-none d-md-flex justify-content-center">
             <Col md="auto">
               <img src={logo} alt="Fork & Search" className="header-logo" />
@@ -168,21 +170,67 @@ function HeaderHome() {
         </Container>
       </div>
 
-      {/* === Offcanvas === */}
-      <Offcanvas show={showMenu} onHide={() => setShowMenu(false)} placement="end">
+      {/* === Offcanvas Menu === */}
+      <Offcanvas
+        show={showMenu}
+        onHide={() => setShowMenu(false)}
+        placement="end"
+      >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Nav.Link onClick={() => { setShowMenu(false); navigate("/"); }}>Home</Nav.Link>
-            <Nav.Link onClick={() => { setShowMenu(false); navigate("/recipes"); }}>Recipes</Nav.Link>
-            <Nav.Link onClick={() => { setShowMenu(false); navigate("/contact"); }}>Contact</Nav.Link>
-            <Nav.Link onClick={() => { setShowMenu(false); navigate("/about"); }}>About</Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                setShowMenu(false);
+                navigate("/");
+              }}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                setShowMenu(false);
+                navigate("/recipes");
+              }}
+            >
+              Recipes
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                setShowMenu(false);
+                navigate("/contact");
+              }}
+            >
+              Contact
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                setShowMenu(false);
+                navigate("/about");
+              }}
+            >
+              About
+            </Nav.Link>
             {user ? (
-              <Nav.Link onClick={() => { handleLogout(); setShowMenu(false); }}>Logout</Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  handleLogout();
+                  setShowMenu(false);
+                }}
+              >
+                Logout
+              </Nav.Link>
             ) : (
-              <Nav.Link onClick={() => { setShowLogin(true); setShowMenu(false); }}>Login</Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  setShowLogin(true);
+                  setShowMenu(false);
+                }}
+              >
+                Login
+              </Nav.Link>
             )}
           </Nav>
         </Offcanvas.Body>
@@ -218,7 +266,14 @@ function HeaderHome() {
       <SearchModal
         show={showSearchModal}
         handleClose={() => setShowSearchModal(false)}
-        results={searchResults} // ✅ now uses live results
+        results={searchResults}
+      />
+      <MobileSearchModal
+        show={showMobileSearch}
+        handleClose={() => setShowMobileSearch(false)}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        runSearch={runSearch}
       />
     </div>
   );

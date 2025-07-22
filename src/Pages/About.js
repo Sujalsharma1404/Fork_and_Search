@@ -24,7 +24,7 @@ function About() {
         <Row className="align-items-center">
           <Col md={6}>
             <Image
-              src="https://fabrx.co/preview/tastebite/assets/img/about-img.jpg"
+              src="/Images/aboutus.jpg"
               fluid
               rounded
               className="about-img"

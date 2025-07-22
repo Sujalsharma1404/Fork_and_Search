@@ -10,6 +10,7 @@ import ScrollToTop from "./ScrollToTop";
 import AdminRoute from "./AdminRoute";
 import AdminPage from "./Pages/AdminPage";
 import AdminUsersPage from "./Pages/AdminUsersPage";
+import AdminContacts from "./Pages/AdminContacts";
 
 
 
@@ -30,6 +31,7 @@ function App() {
           </AdminRoute>
         } />
         <Route path="/admin/users" element={<AdminUsersPage />} />
+<Route path="/admin/contacts" element={<AdminContacts />} />
 
       </Routes>
 

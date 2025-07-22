@@ -5,14 +5,13 @@ import PopularCategories from "../Components/CategorySection";
 import NewsletterSignup from "../Components/NewsletterSignup";
 import CookingHacks from "../Components/CookingHacks";
 import LatestRecipes from "../Components/LatestRecipes";
-import CategoryData from '../Components/Data/CategoryData.json';
 
 function Home() {
   return (
     <>
       <HeaderHome />
       <HomeCarousel />
-      <PopularCategories categories={CategoryData} />
+      <PopularCategories/>
       <LatestRecipes />
       <CookingHacks />
       <NewsletterSignup />

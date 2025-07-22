@@ -96,6 +96,9 @@ export default function AdminPage() {
             >
               👥 Manage Users
             </Button>
+            <Button onClick={() => navigate("/admin/contacts")}>
+              View Contact Messages
+            </Button>
           </div>
 
           <Form.Select
