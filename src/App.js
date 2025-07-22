@@ -9,6 +9,9 @@ import Footer from './Components/Footer';
 import ScrollToTop from "./ScrollToTop";
 import AdminRoute from "./AdminRoute";
 import AdminPage from "./Pages/AdminPage";
+import AdminUsersPage from "./Pages/AdminUsersPage";
+
+
 
 function App() {
   return (
@@ -26,7 +29,10 @@ function App() {
             <AdminPage />
           </AdminRoute>
         } />
+        <Route path="/admin/users" element={<AdminUsersPage />} />
+
       </Routes>
+
       <Footer />
 
     </Router>

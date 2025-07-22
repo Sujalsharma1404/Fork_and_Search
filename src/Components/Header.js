@@ -124,12 +124,12 @@ function Header() {
 
               {showSearch ? (
                 <form onSubmit={handleSearchSubmit} className="search-wrapper mobile-search-wrapper">
-                  <input
+                  <Link
                     type="text"
                     className="search-input"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search..."
+                    // placeholder="Search..."
                     autoFocus
                   />
                   <button className="close-search-btn" onClick={closeSearch} type="button">
