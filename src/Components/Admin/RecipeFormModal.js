@@ -7,6 +7,7 @@ import {
   updateDoc,
   doc,
   getDocs,
+  deleteDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase";
 import "./RecipeFormModal.css";
@@ -21,6 +22,8 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
   const [ingredients, setIngredients] = useState([]);
   const [newIngredientName, setNewIngredientName] = useState("");
   const [newIngredientQty, setNewIngredientQty] = useState("");
+  const [tips, setTips] = useState([]);
+  const [newTip, setNewTip] = useState("");
   const [categories, setCategories] = useState([]);
   const [newCategory, setNewCategory] = useState("");
   const [time, setTime] = useState("");
@@ -29,13 +32,13 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
   useEffect(() => {
     const fetchCategories = async () => {
       const querySnapshot = await getDocs(collection(db, "categories"));
-      const data = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
+      const data = querySnapshot.docs.map((docSnap) => ({
+        id: docSnap.id,
+        ...docSnap.data(),
       }));
       setCategories(data);
     };
-    fetchCategories();
+    if (show) fetchCategories();
   }, [show]);
 
   useEffect(() => {
@@ -46,6 +49,7 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
       setDescription(editRecipe.description || "");
       setSteps(editRecipe.steps || []);
       setIngredients(editRecipe.ingredients || []);
+      setTips(editRecipe.tips || []);
       setTime(editRecipe.time || "");
       setDifficulty(editRecipe.difficulty || "");
     } else {
@@ -55,6 +59,7 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
       setDescription("");
       setSteps([]);
       setIngredients([]);
+      setTips([]);
       setTime("");
       setDifficulty("");
     }
@@ -73,13 +78,14 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
       description,
       steps,
       ingredients,
+      tips,
       time,
       difficulty,
     };
 
     try {
-      if (editRecipe) {
-        await updateDoc(doc(db, "recipes", editRecipe.id), data);
+      if (editRecipe?.firestoreId || editRecipe?.id) {
+        await updateDoc(doc(db, "recipes", editRecipe.firestoreId || editRecipe.id), data);
         alert("Recipe updated!");
       } else {
         await addDoc(collection(db, "recipes"), data);
@@ -95,14 +101,27 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
   const handleAddCategory = async () => {
     if (!newCategory.trim()) return;
     try {
-      await addDoc(collection(db, "categories"), {
+      const docRef = await addDoc(collection(db, "categories"), {
         category: newCategory,
       });
+      setCategories([...categories, { id: docRef.id, category: newCategory }]);
       alert("Category added!");
       setNewCategory("");
     } catch (err) {
       console.error(err);
       alert("Failed to add category.");
+    }
+  };
+
+  const handleDeleteCategory = async (catId) => {
+    if (!window.confirm("Delete this category?")) return;
+    try {
+      await deleteDoc(doc(db, "categories", catId));
+      setCategories(categories.filter((cat) => cat.id !== catId));
+      alert("Category deleted!");
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete category.");
     }
   };
 
@@ -113,29 +132,51 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
   };
 
   const handleRemoveStep = (index) => {
-    const updatedSteps = [...steps];
-    updatedSteps.splice(index, 1);
-    setSteps(updatedSteps);
+    const updated = [...steps];
+    updated.splice(index, 1);
+    setSteps(updated);
+  };
+
+  const handleAddTip = () => {
+    if (!newTip.trim()) return;
+    setTips([...tips, newTip.trim()]);
+    setNewTip("");
+  };
+
+  const handleRemoveTip = (index) => {
+    const updated = [...tips];
+    updated.splice(index, 1);
+    setTips(updated);
   };
 
   const handleAddIngredient = () => {
     if (!newIngredientName.trim()) return;
-    setIngredients([...ingredients, { name: newIngredientName.trim(), quantity: newIngredientQty.trim() }]);
+    setIngredients([
+      ...ingredients,
+      { name: newIngredientName.trim(), quantity: newIngredientQty.trim() },
+    ]);
     setNewIngredientName("");
     setNewIngredientQty("");
   };
 
   const handleRemoveIngredient = (index) => {
-    const updatedIngredients = [...ingredients];
-    updatedIngredients.splice(index, 1);
-    setIngredients(updatedIngredients);
+    const updated = [...ingredients];
+    updated.splice(index, 1);
+    setIngredients(updated);
   };
 
   return (
-    <Modal show={show} onHide={() => handleClose(false)} size="lg" centered className="recipe-form-modal">
+    <Modal
+      show={show}
+      onHide={() => handleClose(false)}
+      size="lg"
+      centered
+      className="recipe-form-modal"
+    >
       <Modal.Header closeButton>
         <Modal.Title>{editRecipe ? "Edit Recipe" : "Add Recipe"}</Modal.Title>
       </Modal.Header>
+
       <Modal.Body>
         <Form>
           <Row>
@@ -206,7 +247,6 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
                   placeholder="Easy, Medium, Hard"
                 />
               </Form.Group>
-
             </Col>
 
             <Col md={6}>
@@ -243,6 +283,36 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
                         size="sm"
                         className="ms-2"
                         onClick={() => handleRemoveStep(index)}
+                      >
+                        Remove
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Chef's Tips</Form.Label>
+                <InputGroup className="mb-2">
+                  <Form.Control
+                    type="text"
+                    placeholder="Add tip"
+                    value={newTip}
+                    onChange={(e) => setNewTip(e.target.value)}
+                  />
+                  <Button variant="outline-success" onClick={handleAddTip}>
+                    ➕
+                  </Button>
+                </InputGroup>
+                <ul className="steps-list">
+                  {tips.map((tip, index) => (
+                    <li key={index}>
+                      {tip}
+                      <Button
+                        variant="outline-danger"
+                        size="sm"
+                        className="ms-2"
+                        onClick={() => handleRemoveTip(index)}
                       >
                         Remove
                       </Button>
@@ -290,6 +360,7 @@ export default function RecipeFormModal({ show, handleClose, editRecipe }) {
           </Row>
         </Form>
       </Modal.Body>
+
       <Modal.Footer>
         <Button variant="secondary" onClick={() => handleClose(false)}>
           Cancel

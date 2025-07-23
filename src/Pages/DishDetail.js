@@ -1,6 +1,7 @@
+// ✅ src/Pages/DishDetail.js
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { Container, Row, Col, Card, ListGroup, Spinner } from 'react-bootstrap';
 import "../Components/Style/DishDetail.css";
@@ -14,15 +15,11 @@ function DishDetail() {
   useEffect(() => {
     const fetchDish = async () => {
       try {
-        const q = query(
-          collection(db, "recipes"),
-          where("id", "==", Number(dishId))
-        );
-        const querySnapshot = await getDocs(q);
+        const docRef = doc(db, "recipes", dishId);
+        const docSnap = await getDoc(docRef);
 
-        if (!querySnapshot.empty) {
-          // Get first matched document
-          setDish(querySnapshot.docs[0].data());
+        if (docSnap.exists()) {
+          setDish(docSnap.data());
         } else {
           setDish(null);
         }
@@ -98,9 +95,6 @@ function DishDetail() {
                 <div className="dish-meta mb-3">
                   <span>⏱ {dish.time || 'Not specified'}</span>
                   <span>⚡ {dish.difficulty || 'Not specified'}</span>
-                  {dish.quantity && (
-                    <span>🍽 {dish.quantity}</span>
-                  )}
                 </div>
 
                 {dish.ingredients?.length > 0 && (
@@ -115,7 +109,6 @@ function DishDetail() {
                     </ListGroup>
                   </>
                 )}
-
 
                 {dish.steps?.length > 0 && (
                   <>

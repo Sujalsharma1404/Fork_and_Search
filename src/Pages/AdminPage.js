@@ -18,12 +18,14 @@ export default function AdminPage() {
 
   const navigate = useNavigate();
 
+  // ✅ Keep Firestore ID separate
   const fetchRecipes = async () => {
+    setLoading(true);
     try {
       const querySnapshot = await getDocs(collection(db, "recipes"));
-      const data = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
+      const data = querySnapshot.docs.map((docSnap) => ({
+        firestoreId: docSnap.id, // ✅ Real Firestore ID
+        ...docSnap.data(),
       }));
       setRecipes(data);
     } catch (error) {
@@ -36,9 +38,9 @@ export default function AdminPage() {
   const fetchCategories = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "categories"));
-      const data = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
+      const data = querySnapshot.docs.map((docSnap) => ({
+        id: docSnap.id,
+        ...docSnap.data(),
       }));
       setCategories(data.map((cat) => cat.category));
     } catch (error) {
@@ -51,18 +53,20 @@ export default function AdminPage() {
     fetchCategories();
   }, []);
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (firestoreId) => {
     if (window.confirm("Are you sure you want to delete this recipe?")) {
       try {
-        await deleteDoc(doc(db, "recipes", id));
-        setRecipes(recipes.filter((r) => r.id !== id));
+        await deleteDoc(doc(db, "recipes", firestoreId));
+        setRecipes((prev) => prev.filter((r) => r.firestoreId !== firestoreId));
       } catch (error) {
         console.error("Delete failed:", error);
+        alert("Error deleting recipe. Try again.");
       }
     }
   };
 
   const handleEdit = (recipe) => {
+    console.log("Editing Recipe:", recipe);
     setEditRecipe(recipe);
     setShowForm(true);
   };
@@ -79,7 +83,7 @@ export default function AdminPage() {
         <h1 className="mb-4">Admin Dashboard</h1>
 
         <div className="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
-          <div className="d-flex gap-2">
+          <div className="d-flex gap-2 flex-wrap">
             <Button
               variant="success"
               onClick={() => {
@@ -90,14 +94,12 @@ export default function AdminPage() {
               ➕ Add New Recipe
             </Button>
 
-            <Button
-              variant="secondary"
-              onClick={() => navigate("/admin/users")}
-            >
+            <Button variant="secondary" onClick={() => navigate("/admin/users")}>
               👥 Manage Users
             </Button>
-            <Button onClick={() => navigate("/admin/contacts")}>
-              View Contact Messages
+
+            <Button variant="info" onClick={() => navigate("/admin/contacts")}>
+              📩 View Contact Messages
             </Button>
           </div>
 
@@ -117,7 +119,8 @@ export default function AdminPage() {
 
         {loading ? (
           <div className="text-center">
-            <Spinner animation="border" /> Loading recipes...
+            <Spinner animation="border" role="status" />
+            <div>Loading recipes...</div>
           </div>
         ) : filteredRecipes.length === 0 ? (
           <p>No recipes found.</p>
@@ -133,7 +136,7 @@ export default function AdminPage() {
             </thead>
             <tbody>
               {filteredRecipes.map((recipe) => (
-                <tr key={recipe.id}>
+                <tr key={recipe.firestoreId}>
                   <td>{recipe.name}</td>
                   <td>{recipe.category}</td>
                   <td>{recipe.description?.slice(0, 50)}...</td>
@@ -149,7 +152,7 @@ export default function AdminPage() {
                     <Button
                       variant="outline-danger"
                       size="sm"
-                      onClick={() => handleDelete(recipe.id)}
+                      onClick={() => handleDelete(recipe.firestoreId)}
                     >
                       Delete
                     </Button>
