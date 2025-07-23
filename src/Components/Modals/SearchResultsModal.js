@@ -1,14 +1,16 @@
+// ✅ src/Components/YourModalFolder/SearchResultsModal.js
+
 import React from "react";
-import { Modal, Row, Col, Button } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "./Modal.css"; // keep your modal styling here
+import "./Modal.css";
 
 export default function SearchResultsModal({ show, handleClose, results }) {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
     handleClose();
-    navigate(`/dish/${id}`); // ✅ make sure this matches your DishDetail route!
+    navigate(`/dish/${id}`); // ✅ this must match your DishDetail route
   };
 
   return (
@@ -28,36 +30,25 @@ export default function SearchResultsModal({ show, handleClose, results }) {
           <div className="search-results-list">
             {results.map((recipe) => (
               <div
-                key={recipe.id}
-                className="search-result-card mb-3 p-2 border rounded d-flex align-items-center"
-                onClick={() => handleClick(recipe.id)}
-                style={{ cursor: "pointer", transition: "background 0.2s" }}
+                key={recipe.firestoreId}
+                className="search-result-card"
+                onClick={() => handleClick(recipe.firestoreId)}
               >
                 <img
                   src={recipe.image || "/placeholder-image.jpg"}
                   alt={recipe.name}
-                  style={{
-                    width: "120px",
-                    height: "80px",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                    flexShrink: 0,
-                  }}
                   onError={(e) => {
                     e.target.src = "/placeholder-image.jpg";
                   }}
                 />
 
-                <div className="ms-3" style={{ flex: 1 }}>
-                  <h6 className="mb-1 fw-bold">{recipe.name}</h6>
-                  <p className="mb-1 text-muted" style={{ fontSize: "0.9rem" }}>
+                <div className="result-info">
+                  <h5>{recipe.name}</h5>
+                  <p className="result-category">
                     {recipe.category || "Uncategorized"}
                   </p>
                   {recipe.description && (
-                    <p
-                      className="mb-0 text-truncate"
-                      style={{ fontSize: "0.85rem", maxWidth: "100%" }}
-                    >
+                    <p className="result-description">
                       {recipe.description.slice(0, 80)}...
                     </p>
                   )}

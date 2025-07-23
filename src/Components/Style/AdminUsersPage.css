@@ -1,55 +1,106 @@
 /* AdminUsersPage.css */
 
+/* Container */
 .admin-users-container {
   padding: 40px 20px;
-  background: #f9f9f9;
+  background: #f5f7fa;
   min-height: 100vh;
 }
 
+/* Inner Content */
 .admin-users-content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   background: #ffffff;
-  border-radius: 8px;
-  padding: 40px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
 }
 
+/* Page Title */
 .admin-users-title {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
-  color: #333;
+  color: #222;
 }
 
+/* Table Styles */
 .admin-users-table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 600px; /* prevent too small on mobile */
 }
 
 .admin-users-table th,
 .admin-users-table td {
   border: 1px solid #ddd;
-  padding: 12px 16px;
+  padding: 14px 18px;
   text-align: left;
+  vertical-align: middle;
 }
 
 .admin-users-table th {
-  background: #f0f0f0;
-  font-weight: 600;
+  background: #f8f9fa;
+  font-weight: 700;
+  color: #333;
 }
 
+.admin-users-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-users-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Remove Button */
 .btn-remove {
   background: #dc3545;
   border: none;
   color: #fff;
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-  transition: 0.2s ease;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
 }
 
 .btn-remove:hover {
   background: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-users-content {
+    padding: 30px 20px;
+  }
+
+  .admin-users-title {
+    font-size: 26px;
+  }
+
+  .admin-users-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .admin-users-table th,
+  .admin-users-table td {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-users-title {
+    font-size: 22px;
+  }
+
+  .btn-remove {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
 }

@@ -1,4 +1,4 @@
-// ✅ src/utils/search.js
+
 
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase";
@@ -6,7 +6,7 @@ import { db } from "./firebase";
 /**
  * Search recipes in Firestore by name
  * @param {string} query - Search term
- * @returns {Promise<Array>} - Matching recipes
+ * @returns {Promise<Array>} - Matching recipes with Firestore ID
  */
 export async function searchRecipes(query) {
   if (!query) return [];
@@ -20,7 +20,7 @@ export async function searchRecipes(query) {
       const data = doc.data();
       if (data.name && data.name.toLowerCase().includes(lower)) {
         results.push({
-          id: doc.id, // use Firestore ID for navigation
+          firestoreId: doc.id, // ✅ IMPORTANT: use consistent Firestore ID
           ...data,
         });
       }

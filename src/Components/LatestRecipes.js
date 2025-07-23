@@ -14,7 +14,7 @@ export default function LatestRecipes() {
         const querySnapshot = await getDocs(recipesRef);
 
         const allRecipes = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
+          firestoreId: doc.id, // ✅ store as firestoreId
           ...doc.data(),
         }));
 
@@ -37,7 +37,7 @@ export default function LatestRecipes() {
       <h2>Latest Recipes</h2>
       <div className="recipes-grid">
         {randomRecipes.map((dish) => (
-          <div className="recipe-card" key={dish.id}>
+          <div className="recipe-card" key={dish.firestoreId}>
             <img
               src={dish.image || "/placeholder-image.jpg"}
               alt={dish.name || "Dish"}
@@ -49,7 +49,7 @@ export default function LatestRecipes() {
               <h3>{dish.name || "Untitled"}</h3>
               {dish.description && <p>{dish.description}</p>}
 
-              <Link to={`/dish/${dish.id}`}>
+              <Link to={`/dish/${dish.firestoreId}`}>
                 <button className="view-btn">View Recipe</button>
               </Link>
             </div>

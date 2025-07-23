@@ -139,9 +139,9 @@ function Header() {
                   </div>
                 </form>
               ) : (
-                <button className="mobile-nav-link" onClick={toggleSearch}>
+                <Link className="mobile-nav-link" onClick={toggleSearch}>
                   <FaSearch size={18} /> Search
-                </button>
+                </Link>
               )}
 
 
