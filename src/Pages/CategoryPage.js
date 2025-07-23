@@ -1,3 +1,4 @@
+// ✅ src/Pages/CategoryPage.js
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Container, Row, Col, Card, Spinner } from 'react-bootstrap';
@@ -19,7 +20,7 @@ function CategoryPage() {
         const snapshot = await getDocs(q);
 
         const fetchedRecipes = snapshot.docs.map(doc => ({
-          id: doc.id,      // ✅ Firestore doc ID
+          firestoreId: doc.id,  // ✅ always use `firestoreId`
           ...doc.data(),
         }));
 
@@ -64,14 +65,14 @@ function CategoryPage() {
         </h1>
 
         <Row className="recipe-grid">
-          {recipes.map(dish => (
-            <Col key={dish.id} sm={6} md={4} lg={3} className="mb-4">
-              <Link to={`/dish/${dish.id}`} className="recipe-link">
+          {recipes.map(recipe => (
+            <Col key={recipe.firestoreId} sm={6} md={4} lg={3} className="mb-4">
+              <Link to={`/dish/${recipe.firestoreId}`} className="recipe-link">
                 <Card className="recipe-card">
                   <Card.Img
                     variant="top"
-                    src={dish.image || "/placeholder-image.jpg"}
-                    alt={dish.name || "Dish image"}
+                    src={recipe.image || "/placeholder-image.jpg"}
+                    alt={recipe.name || "Dish image"}
                     onError={(e) => {
                       e.target.src = "/placeholder-image.jpg";
                     }}
@@ -79,14 +80,14 @@ function CategoryPage() {
                   />
                   <Card.Body>
                     <Card.Title className="dish-name">
-                      {dish.name || "Untitled Dish"}
+                      {recipe.name || "Untitled Dish"}
                     </Card.Title>
-                    {dish.description && (
-                      <p>{dish.description}</p>
+                    {recipe.description && (
+                      <p>{recipe.description}</p>
                     )}
                     <div className="dish-meta">
-                      <span>⏱ {dish.time || "N/A"}</span>
-                      <span>⚡ {dish.difficulty || "N/A"}</span>
+                      <span>⏱ {recipe.time || "N/A"}</span>
+                      <span>⚡ {recipe.difficulty || "N/A"}</span>
                     </div>
                   </Card.Body>
                 </Card>
